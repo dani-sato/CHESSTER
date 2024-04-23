@@ -16,16 +16,16 @@ public:
 		setPosx(x_c);
 		setPosy(y_c);
 		setColor(color_c);
-		tipoPieza = tipo_c;
-		cout << "Pieza de tipo " << tipoPieza << " creada" << endl;
+		setTipo(tipo_c);
+		cout << "Pieza de tipo " << getTipo() << " creada" << endl;
 	}
 	virtual ~Pieza() { cout << "Pieza de tipo "<<tipoPieza<<" destruida" << endl; } //Destructor
 
 	int getColor() { return color; }
 	void setColor(int color_s) { color = color_s; }
-	float getPosx() { return pos.x; }
+	double getPosx() { return pos.x; }
 	void setPosx(float posx_s) { pos.x = posx_s; }
-	float getPosy() { return pos.y; }
+	double getPosy() { return pos.y; }
 	void setPosy(float posy_s) { pos.y = posy_s; }
 	string getTipo() { return tipoPieza; }
 	void setTipo(string tipo_c) { tipoPieza = tipo_c; }
