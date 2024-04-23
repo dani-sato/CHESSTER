@@ -35,10 +35,10 @@
     <ClInclude Include="src\Pieza.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Peon.h">
+    <ClInclude Include="Torre.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Torre.h">
+    <ClInclude Include="src\Peon.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

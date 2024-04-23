@@ -8,7 +8,7 @@ class Pieza {
 private:
 	ETSIDI::Vector2D pos;
 	int color; //0 Negro 1 Blanco
-//	string tipoPieza; que segun el tipo de pieza, el movimiento tiene ciertas restricciones
+	//	string tipoPieza; que segun el tipo de pieza, el movimiento tiene ciertas restricciones
 	bool posOcupada(){};//0 No ocupada 1 Ocupada | Diferenciar si ocupada por tu color o el otro
 public:
 	Pieza(int color_c = 0, float x_c = 0, float y_c = 0) { //Constructor

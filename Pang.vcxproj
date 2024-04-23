@@ -25,7 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\ETSIDI.h" />
-    <ClInclude Include="Peon.h" />
+    <ClInclude Include="src\Peon.h" />
     <ClInclude Include="src\Tablero.h" />
     <ClInclude Include="src\Pieza.h" />
     <ClInclude Include="Torre.h" />

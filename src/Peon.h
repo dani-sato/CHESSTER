@@ -18,5 +18,4 @@ public:
 		cout << "Se ha creado el peon de color: " << getColor() << "  :" << " (" << getPosx() << ", " << getPosy() << ")" << endl;
 	}
 	int getNumPeon() { return numPeon; }
-
 };
