@@ -1,0 +1,4 @@
+﻿  Pang.cpp
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(22,30): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(24,30): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  Pang.vcxproj -> C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\bin\Pang.exe
