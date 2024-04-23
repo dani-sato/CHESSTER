@@ -54,3 +54,7 @@ public:
 		pos.y= pos.y- casillas*5.0;
 	}
 };
+
+
+
+danisubnormal
