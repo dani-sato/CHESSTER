@@ -4,7 +4,35 @@
 #include <math.h>
 #include "ETSIDI.h"
 
-ETSIDI::Vector2D pos;
+void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto de vista del peon. x es el numero de casillas
+	pos.x = pos.x - casillas * 5.0;
+}
+void Pieza::mover_dch(int casillas) {
+	pos.x = pos.x + casillas * 5.0;
+}
+void Pieza::mover_arriba(int casillas) {
+	pos.y = pos.y + casillas * 5.0;
+}
+void Pieza::mover_abajo(int casillas) {
+	pos.y = pos.y - casillas * 5.0;
+}
+void Pieza::mover_arr_dcha(int casillas) {
+	pos.x = pos.x + casillas * 5.0;
+	pos.y = pos.y + casillas * 5.0;
+}
+void Pieza::mover_arr_izq(int casillas) {
+	pos.x = pos.x - casillas * 5.0;
+	pos.y = pos.y + casillas * 5.0;
+}
+void Pieza::mover_abajo_dcha(int casillas) {
+	pos.x = pos.x + casillas * 5.0;
+	pos.y = pos.y - casillas * 5.0;
+}
+void Pieza::mover_abajo_izq(int casillas) {
+	pos.x = pos.x - casillas * 5.0;
+	pos.y = pos.y - casillas * 5.0;
+}
+
 /*
 ETSIDI::Sprite PeonNegro1{ "C:/Users/Daniel Sato/source/repos/trabajo2024/tema4inicial_VS19x64/imagenes/peon-negro.png", 2.5,17.5 , 2.5, 2.5 }; 
 ETSIDI::Sprite PeonNegro2{ "C:/Users/Daniel Sato/source/repos/trabajo2024/tema4inicial_VS19x64/imagenes/peon-negro.png", 7.5,17.5 , 2.5, 2.5 };

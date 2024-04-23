@@ -18,19 +18,24 @@ void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecl
 
 int main(int argc,char* argv[])
 {
-	Peon peonB1(1,1, 2.5, 17.5);    Peon peonN1(1,0, 2.5, 5.5);
-	Peon peonB2(2,1, 7.5, 17.5);	Peon peonN2(2,0, 7.5, 5.5);
-	Peon peonB3(3,1, 12.5, 17.5);	Peon peonN3(3,0, 12.5, 5.5);
-	Peon peonB4(4,1, 17.5, 17.5);	Peon peonN4(4,0, 17.5, 5.5);
+	Peon* ptrPeonB1 = new Peon(1, 1, 2.5, 17.5, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, 7.5, 17.5, "Peon");
+	Peon* ptrPeonB3 = new Peon(3, 1, 12.5, 17.5, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, 17.5, 17.5, "Peon");
 
-	Torre torreB1(1, 1, 2.5, 22.5);	 Torre torreN1(1, 0, 2.5, 5.5);
-	Torre torreB2(2, 1, 17.5, 22.5); Torre torreN2(2, 0, 17.5, 5.5);
+	Peon* ptrPeonN1 = new Peon(1, 0, 2.5, 5.5, "Peon"); Peon* ptrPeonN2 = new Peon(2, 0, 7.5, 5.5, "Peon");
+	Peon* ptrPeonN3 = new Peon(3, 0, 12.5, 5.5, "Peon"); Peon* ptrPeonN4 = new Peon(4, 0, 17.5, 5.5, "Peon");
 
+/*	Torre* ptrTorreB1 = new Torre(1, 1, 2.5, 22.5, ); Torre* ptrTorreB2 = new Torre(2, 1, 17.5, 22.5);
+	Torre* ptrTorreN1 = new Torre(1, 0, 2.5, 5.5); Torre* ptrTorreN2 = new Torre(2, 0, 17.5, 5.5);
+*/
 
+	cout << "La posicion del peon numero " << ptrPeonB1->getNumPeon()<<" de color: "<< ptrPeonB1->getColor()<<" es : "<<" ("
+	<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 
-	cout << "La posicion del peon numero " << peonB1.getNumPeon()<<" de color: "<<peonB1.getColor()<<" es : "<<" (" 
-	<< peonB1.getPosx() << ", " << peonB1.getPosy() << ")" << endl;
-	peonB1.mover_arriba(1);
+	ptrPeonB1->mover_abajo(1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
+		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+
+/*	peonB1.mover_arriba(1);
 	cout << "La nueva posicion del peon de color: " << peonB1.getColor() << " es :" << " (" << peonB1.getPosx() <<
 	", " << peonB1.getPosy() << ")" << endl;
 
@@ -39,7 +44,7 @@ int main(int argc,char* argv[])
 	torreN1.mover_arriba(3);
 	cout << "La posicion de la torre numero " << torreN1.getNumTorre() << " de color: " << torreN1.getColor() << " es : " << " ("
 		<< torreN1.getPosx() << ", " << torreN1.getPosy() << ")" << endl;
-
+*/
 	//Inicializar el gestor de ventanas GLUT
 	//y crear la ventana
 	glutInit(&argc, argv);
