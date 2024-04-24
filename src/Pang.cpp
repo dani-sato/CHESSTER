@@ -2,6 +2,7 @@
 #include "Pieza.h"
 #include "Peon.h"
 #include "Torre.h"
+#include "TorreDePrueba.h" //Aquí tampoco me acepta el .h
 #include "freeglut.h"
 #include<iostream>
 
@@ -24,9 +25,9 @@ int main(int argc,char* argv[])
 	Peon* ptrPeonN1 = new Peon(1, 0, 2.5, 5.5, "Peon"); Peon* ptrPeonN2 = new Peon(2, 0, 7.5, 5.5, "Peon");
 	Peon* ptrPeonN3 = new Peon(3, 0, 12.5, 5.5, "Peon"); Peon* ptrPeonN4 = new Peon(4, 0, 17.5, 5.5, "Peon");
 
-/*	Torre* ptrTorreB1 = new Torre(1, 1, 2.5, 22.5, ); Torre* ptrTorreB2 = new Torre(2, 1, 17.5, 22.5);
-	Torre* ptrTorreN1 = new Torre(1, 0, 2.5, 5.5); Torre* ptrTorreN2 = new Torre(2, 0, 17.5, 5.5);
-*/
+	TorreDePrueba* ptrTorreB1 = new TorreDePrueba(1, 1, 2.5, 22.5, "Torre"); TorreDePrueba* ptrTorreB2 = new TorreDePrueba(2, 1, 17.5, 22.5, "Torre");
+	TorreDePrueba* ptrTorreN1 = new TorreDePrueba(1, 0, 2.5, 5.5, "Torre"); TorreDePrueba* ptrTorreN2 = new TorreDePrueba(2, 0, 17.5, 5.5, "Torre");
+
 
 	cout << "La posicion del peon numero " << ptrPeonB1->getNumPeon()<<" de color: "<< ptrPeonB1->getColor()<<" es : "<<" ("
 	<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
