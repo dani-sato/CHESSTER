@@ -19,19 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Peon.cpp" />
+    <ClCompile Include="src\Peon.cpp" />
     <ClCompile Include="src\Tablero.cpp" />
     <ClCompile Include="src\Pang.cpp" />
     <ClCompile Include="src\Pieza.cpp" />
-    <ClCompile Include="TorreDePrueba.cpp" />
+    <ClCompile Include="src\Torre.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\ETSIDI.h" />
     <ClInclude Include="src\Peon.h" />
     <ClInclude Include="src\Tablero.h" />
     <ClInclude Include="src\Pieza.h" />
-    <ClInclude Include="Torre.h" />
-    <ClInclude Include="TorreDePrueba.h" />
+    <ClInclude Include="src\Torre.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

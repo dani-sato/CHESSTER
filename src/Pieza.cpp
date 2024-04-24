@@ -1,7 +1,7 @@
 #include "Pieza.h"
 #include "freeglut.h"
 #include"Peon.h"
-#include "TorreDePrueba.h"  //No entiendo porque no me acepta este .h
+#include "Torre.h"  
 #include <math.h>
 #include "ETSIDI.h"
 
