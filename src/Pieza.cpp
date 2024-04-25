@@ -34,6 +34,10 @@ void Pieza::mover_abajo_izq(int casillas) {
 	pos.y = pos.y - casillas * 5.0;
 }
 
+bool Pieza::posOcupada(int x, int y) {
+	//Aquí debe ir el codigo que dice si la nueva posición está ocupada por alguna pieza
+}
+
 /*
 ETSIDI::Sprite PeonNegro1{ "C:/Users/Daniel Sato/source/repos/trabajo2024/tema4inicial_VS19x64/imagenes/peon-negro.png", 2.5,17.5 , 2.5, 2.5 }; 
 ETSIDI::Sprite PeonNegro2{ "C:/Users/Daniel Sato/source/repos/trabajo2024/tema4inicial_VS19x64/imagenes/peon-negro.png", 7.5,17.5 , 2.5, 2.5 };

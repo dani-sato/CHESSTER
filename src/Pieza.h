@@ -9,8 +9,10 @@ class Pieza {
 private:
 	ETSIDI::Vector2D pos;
 	int color; //0 Negro 1 Blanco
+	const int limite_sup = 25; //Limites del tablero
+	const int limite_inf = 0;
 	string tipoPieza; // (Peon,torre...) que segun el tipo de pieza, el movimiento tiene ciertas restricciones
-	bool posOcupada(){};//0 No ocupada 1 Ocupada | Diferenciar si ocupada por tu color o el otro
+	
 public:
 	Pieza(string tipo_c="Vacio", int color_c = 0, float x_c = 0, float y_c = 0) { //Constructor
 		setPosx(x_c);
@@ -30,6 +32,8 @@ public:
 	string getTipo() { return tipoPieza; }
 	void setTipo(string tipo_c) { tipoPieza = tipo_c; }
 
+	int getLimSup() { return limite_sup; }
+	int getLimInf() { return limite_inf; }
 
 	virtual void mover_izq(int casillas);  //Izquierda de la pantalla, no del punto de vista del peon. x es el numero de casillas
 	virtual void mover_dch(int casillas);
@@ -39,6 +43,8 @@ public:
 	virtual void mover_arr_izq(int casillas);
 	virtual void mover_abajo_dcha(int casillas);
 	virtual void mover_abajo_izq(int casillas);
+
+//	bool posOcupada(int x, int y);//0 No ocupada 1 Ocupada | Diferenciar si ocupada por tu color o el otro. CREO QUE MEJOR HACERLO EN TABLERO
 };
 
 

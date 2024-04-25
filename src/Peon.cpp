@@ -11,7 +11,12 @@ void Peon::mover_dch(int casillas) {
 }
 void Peon::mover_arriba(int casillas) { //Izquierda de la pantalla, no del punto de vista del peon. x es el numero de casillas
 	if (getColor() == 0 && casillas == 1) {
-		Pieza::mover_arriba(casillas);
+		if ((getPosy() + casillas * 5) < getLimSup()) { //Esto funciona bien para controlar los limites del tablero 
+			Pieza::mover_arriba(casillas);
+		}
+		else {
+			cout << "No puedes hacer ese movimiento, te has salido del tablero" << endl;
+		}
 	}
 	else {
 		cout << "Un peon no puede retroceder su posicion ni avanzar mas de una posicion" << endl;
@@ -19,11 +24,17 @@ void Peon::mover_arriba(int casillas) { //Izquierda de la pantalla, no del punto
 }
 void Peon::mover_abajo(int casillas) {
 	if (getColor() == 1 && casillas == 1) {
-		Pieza::mover_abajo(casillas);
+		if ((getPosy() - casillas * 5) > getLimInf()) {
+			Pieza::mover_abajo(casillas);
+		}
+		else {
+			cout << "No puedes hacer ese movimiento, te has salido del tablero" << endl;
+		}
 	}
 	else {
 		cout << "Un peon no puede retroceder su posicion ni avanzar mas de una posicion" << endl;
 	}
+	
 }
 void Peon::mover_arr_dcha(int casillas) {
 	cout << "Un peon no puede mover en diagonal, salvo para comer" << endl;

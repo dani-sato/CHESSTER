@@ -35,6 +35,7 @@ int main(int argc,char* argv[])
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 
+
 /*	peonB1.mover_arriba(1);
 	cout << "La nueva posicion del peon de color: " << peonB1.getColor() << " es :" << " (" << peonB1.getPosx() <<
 	", " << peonB1.getPosy() << ")" << endl;
