@@ -9,9 +9,9 @@ void Peon::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto de
 void Peon::mover_dch(int casillas) {
 	cout << "Un peon no puede moverse a la derecha" << endl;
 }
-void Peon::mover_arriba(int casillas) { //Izquierda de la pantalla, no del punto de vista del peon. x es el numero de casillas
-	if (getColor() == 0 && casillas == 1) {
-		if ((getPosy() + casillas * 5) < getLimSup()) { //Esto funciona bien para controlar los limites del tablero 
+void Peon::mover_arriba(int casillas) { 
+	if (getColor() == 1 && casillas == 1) {
+		if ((getPosy() + casillas ) < getLimSup()) { //Esto funciona bien para controlar los limites del tablero 
 			Pieza::mover_arriba(casillas);
 		}
 		else {

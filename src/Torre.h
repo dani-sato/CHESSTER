@@ -10,14 +10,14 @@ class Torre :public Pieza {
 private:
 	int numTorre;
 public:
-	Torre(int numTorre_c = 0, int color_c = 0, float x_c = 0, float y_c = 0, string tipoPieza_c = "Vacio") //Constructor 
+	Torre(int numTorre_c = 0, int color_c = 0, int x_c = 0, int y_c = 0, string tipoPieza_c = "Vacio") //Constructor 
 	{
 		numTorre = numTorre_c;
 		setColor(color_c);
 		setPosx(x_c);
 		setPosy(y_c);
 		setTipo(tipoPieza_c);
-		cout << "Se ha creado la torre de color: " << getColor() << "  :" << " (" << getPosx() << ", " << getPosy() << ")" << endl;
+		cout << "Se ha creado la torre de color " << getColor()<<" numero "<<numTorre << " y toma la posicion: " << x_c << y_c << endl;
 	}
 	~Torre() { cout << "Torre" << numTorre << " destruida" << endl; }
 	int getNumTorre() { return numTorre; }

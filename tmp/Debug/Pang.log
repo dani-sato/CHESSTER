@@ -1,2 +1,30 @@
-﻿  Peon.cpp
+﻿  Pang.cpp
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(37,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Pang.cpp")
+  
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(39,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Pang.cpp")
+  
+  Peon.cpp
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(37,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Peon.cpp")
+  
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(39,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Peon.cpp")
+  
+  Pieza.cpp
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(37,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Pieza.cpp")
+  
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(39,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Pieza.cpp")
+  
+  Torre.cpp
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(37,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Torre.cpp")
+  
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(39,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Torre.cpp")
+  
+  Generando código...
   Pang.vcxproj -> C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\bin\Pang.exe

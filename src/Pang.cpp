@@ -1,4 +1,4 @@
-#include "Tablero.h"
+//#include "Tablero.h"
 #include "Pieza.h"
 #include "Peon.h"
 #include "Torre.h"
@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Tablero tablero;
+// Tablero tablero;
 
 //los callback, funciones que seran llamadas automaticamente por la glut
 //cuando sucedan eventos
@@ -18,34 +18,22 @@ void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecl
 
 int main(int argc,char* argv[])
 {
-	Peon* ptrPeonB1 = new Peon(1, 1, 2.5, 17.5, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, 7.5, 17.5, "Peon");
-	Peon* ptrPeonB3 = new Peon(3, 1, 12.5, 17.5, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, 17.5, 17.5, "Peon");
+	Peon* ptrPeonB1 = new Peon(1, 1, 0, 1, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, 1, 1, "Peon");  //Actualizar las posiciones
+	Peon* ptrPeonB3 = new Peon(3, 1, 2, 1, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, 3, 1, "Peon");
 
-	Peon* ptrPeonN1 = new Peon(1, 0, 2.5, 5.5, "Peon"); Peon* ptrPeonN2 = new Peon(2, 0, 7.5, 5.5, "Peon");
-	Peon* ptrPeonN3 = new Peon(3, 0, 12.5, 5.5, "Peon"); Peon* ptrPeonN4 = new Peon(4, 0, 17.5, 5.5, "Peon");
+	Peon* ptrPeonN1 = new Peon(1, 0, 0, 3, "Peon"); Peon* ptrPeonN2 = new Peon(2, 0, 1, 3, "Peon");
+	Peon* ptrPeonN3 = new Peon(3, 0, 2, 3, "Peon"); Peon* ptrPeonN4 = new Peon(4, 0, 3, 3, "Peon");
 
-	Torre* ptrTorreB1 = new Torre(1, 1, 2.5, 22.5, "Torre"); Torre* ptrTorreB2 = new Torre(2, 1, 17.5, 22.5, "Torre");
-	Torre* ptrTorreN1 = new Torre(1, 0, 2.5, 5.5, "Torre"); Torre* ptrTorreN2 = new Torre(2, 0, 17.5, 5.5, "Torre");
-
+	Torre* ptrTorreB1 = new Torre(1, 1, 0, 0, "Torre"); Torre* ptrTorreB2 = new Torre(2, 1, 3, 0, "Torre");
+	Torre* ptrTorreN1 = new Torre(1, 0, 0, 4, "Torre"); Torre* ptrTorreN2 = new Torre(2, 0, 3, 4, "Torre");
 
 	cout << "La posicion del peon numero " << ptrPeonB1->getNumPeon()<<" de color: "<< ptrPeonB1->getColor()<<" es : "<<" ("
 	<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 
-	ptrPeonB1->mover_abajo(1);
+	ptrPeonB1->mover_arriba(1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 
-
-/*	peonB1.mover_arriba(1);
-	cout << "La nueva posicion del peon de color: " << peonB1.getColor() << " es :" << " (" << peonB1.getPosx() <<
-	", " << peonB1.getPosy() << ")" << endl;
-
-	cout << "La posicion de la torre numero " << torreN1.getNumTorre() << " de color: " <<torreN1.getColor() << " es : " << " ("
-		<< torreN1.getPosx() << ", " << torreN1.getPosy() << ")" << endl;
-	torreN1.mover_arriba(3);
-	cout << "La posicion de la torre numero " << torreN1.getNumTorre() << " de color: " << torreN1.getColor() << " es : " << " ("
-		<< torreN1.getPosx() << ", " << torreN1.getPosy() << ")" << endl;
-*/
 	//Inicializar el gestor de ventanas GLUT
 	//y crear la ventana
 	glutInit(&argc, argv);

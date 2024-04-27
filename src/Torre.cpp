@@ -17,16 +17,16 @@ void Torre::mover_abajo(int casillas) { //Las torrres se pueden mover para arrib
 }
 
 void Torre::mover_arr_dcha(int casillas) {
-	cout << "Un peon no puede moverse a la derecha" << endl;
+	cout << "Una torre no puede moverse en diagonal" << endl;
 }
 void Torre::mover_arr_izq(int casillas) {
-	cout << "Un peon no puede moverse en diagonal" << endl;
+	cout << "Una torre no puede moverse en diagonal" << endl;
 }
 void Torre::mover_abajo_dcha(int casillas) {
-	cout << "Un peon no puede moverse en diagonal" << endl;
+	cout << "Una torre no puede moverse en diagonal" << endl;
 }
 void Torre::mover_abajo_izq(int casillas) {
-	cout << "Un peon no puede moverse en diagonal" << endl;
+	cout << "Una torre no puede moverse en diagonal" << endl;
 }
 
  
