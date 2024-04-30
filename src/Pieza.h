@@ -7,9 +7,8 @@
 using namespace std;
 
 
-class Pieza;
-class Tablero;
-
+//class Pieza;
+//class Tablero;
 
 class Pieza {
 private:
@@ -19,9 +18,10 @@ private:
 	const int limite_dch = 4;
 	const int limite_inf = 0;
 	string tipoPieza; // (Peon,torre...) que segun el tipo de pieza, el movimiento tiene ciertas restricciones
-	
+
 public:
-	Pieza(/*Tablero tablero, */ string tipo_c = "Vacio", int color_c = 0, int x_c = 0, int y_c = 0) { //Constructor
+
+	Pieza(/*Tablero& tablero,*/ string tipo_c = "Vacio", int color_c = 0, int x_c = 0, int y_c = 0) { //Constructor
 		setPosx(x_c);
 		setPosy(y_c);
 		setColor(color_c);
@@ -45,8 +45,8 @@ public:
 	int getLimDch() { return limite_dch; }
 	int getLimInf() { return limite_inf; }
 
-	virtual void mover_izq(int casillas);  //Izquierda de la pantalla, no del punto de vista del peon. x es el numero de casillas
-	virtual void mover_dch(int casillas);
+	virtual void mover_izq(int casillas);   //Izquierda de la pantalla, no del punto de vista del peon. x es el numero de casillas
+	virtual void mover_dch(int casillas);   
 	virtual void mover_arriba(int casillas);
 	virtual void mover_abajo(int casillas);
 	virtual void mover_arr_dcha(int casillas);
@@ -54,5 +54,8 @@ public:
 	virtual void mover_abajo_dcha(int casillas);
 	virtual void mover_abajo_izq(int casillas);
 
-	friend class Tablero;
+	void rellenarPos();
+
+
+	//friend class Tablero;
 };

@@ -10,10 +10,10 @@ using namespace std;
 class Peon :public Pieza {
 private:
 	int numPeon;
+
 public:
-	Peon(/*Tablero tablero, */ int numPeon_c = 0, int color_c = 0, int x_c = 0, int y_c = 0, string tipo_c = "Vacio") {
+	Peon(int numPeon_c = 0, int color_c = 0, int x_c = 0, int y_c = 0, string tipo_c = "Vacio") {
 		numPeon = numPeon_c;
-	//	tablero.setOcuparPos(x_c, y_c);
 		setPosx(x_c);
 		setPosy(y_c);
 		setColor(color_c);

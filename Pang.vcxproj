@@ -20,9 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Peon.cpp" />
-    <ClCompile Include="src\Tablero.cpp" />
     <ClCompile Include="src\Pang.cpp" />
     <ClCompile Include="src\Pieza.cpp" />
+    <ClCompile Include="src\Tablero.cpp" />
     <ClCompile Include="src\Torre.cpp" />
   </ItemGroup>
   <ItemGroup>

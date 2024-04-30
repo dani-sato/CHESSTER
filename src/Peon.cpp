@@ -1,5 +1,4 @@
 #include"Peon.h"
-#include"Pieza.h"
 
 using namespace std;
 

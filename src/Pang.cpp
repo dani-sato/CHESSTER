@@ -3,11 +3,12 @@
 #include "Peon.h"
 #include "Torre.h"
 #include "freeglut.h"
+#include "Tablero.h"
 #include<iostream>
 
 using namespace std;
 
-// Tablero tablero;
+
 
 //los callback, funciones que seran llamadas automaticamente por la glut
 //cuando sucedan eventos
@@ -18,6 +19,9 @@ void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecl
 
 int main(int argc,char* argv[])
 {
+	Pieza pieza;
+	pieza.rellenarPos();
+	// Pieza* ptrPeonB1 = new Pieza("Peon", 1, 0, 1);
 	Peon* ptrPeonB1 = new Peon(1, 1, 0, 1, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, 1, 1, "Peon");  //Actualizar las posiciones
 	Peon* ptrPeonB3 = new Peon(3, 1, 2, 1, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, 3, 1, "Peon");
 
@@ -30,6 +34,18 @@ int main(int argc,char* argv[])
 	cout << "La posicion del peon numero " << ptrPeonB1->getNumPeon()<<" de color: "<< ptrPeonB1->getColor()<<" es : "<<" ("
 	<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 
+	ptrPeonB1->mover_arriba(1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
+		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+	ptrPeonB1->mover_arriba(1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
+		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+	ptrPeonB1->mover_arriba(1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
+		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+	ptrPeonB1->mover_arriba(1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
+		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 	ptrPeonB1->mover_arriba(1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
