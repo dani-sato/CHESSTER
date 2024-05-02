@@ -9,16 +9,25 @@ using namespace std;
 
 class Tablero{
 private:
-    bool posicionesOcupadas[3][4]; // Matriz 5 filas *4 columnas para el tablero
+    bool posicionesOcupadasPorNegra[3][4]; // Matriz 5 filas *4 columnas para el tablero
+    bool posicionesOcupadasPorBlanca[3][4];
+    int turno; //0 para negro 1 para blanco
 public:
 
     Tablero() {}  //Rellenar el tablero. Todas las casillas a true (ocupada) excepto la fila de en medio a false (libre)
     
-    void rellenarPosiciones();
+    void inicializarTablero();
+    void iniciarTurno();
+    void setTurno();
 
-    void ocuparPos(int x, int y);
-    void liberarPos(int x, int y);
-    bool esPosOcupada(int x, int y);
+    void ocuparPosPorBlanca(int x, int y);
+    void ocuparPosPorNegra(int x, int y);
+
+    void liberarPosPorBlanca(int x, int y);
+    void liberarPosPorNegra(int x, int y);
+
+    bool esPosOcupadaPorBlanca(int x, int y);
+    bool esPosOcupadaPorNegra(int x, int y);
 
     //friend class Pieza;
     // ... Resto de la clase Tablero ...

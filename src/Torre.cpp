@@ -28,5 +28,3 @@ void Torre::mover_abajo_dcha(int casillas) {
 void Torre::mover_abajo_izq(int casillas) {
 	cout << "Una torre no puede moverse en diagonal" << endl;
 }
-
- 

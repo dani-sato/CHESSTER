@@ -20,7 +20,6 @@ private:
 	string tipoPieza; // (Peon,torre...) que segun el tipo de pieza, el movimiento tiene ciertas restricciones
 
 public:
-
 	Pieza(/*Tablero& tablero,*/ string tipo_c = "Vacio", int color_c = 0, int x_c = 0, int y_c = 0) { //Constructor
 		setPosx(x_c);
 		setPosy(y_c);
@@ -54,7 +53,7 @@ public:
 	virtual void mover_abajo_dcha(int casillas);
 	virtual void mover_abajo_izq(int casillas);
 
-	void rellenarPos();
+	void rellenarPos(); //Rellena al inicio, las casillas que estan ocupadas y las que estan libres
 
 
 	//friend class Tablero;

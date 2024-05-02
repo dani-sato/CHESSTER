@@ -8,7 +8,7 @@
 
 using namespace std;
 
-
+extern Tablero tablero;
 
 //los callback, funciones que seran llamadas automaticamente por la glut
 //cuando sucedan eventos
@@ -19,10 +19,10 @@ void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecl
 
 int main(int argc,char* argv[])
 {
-	Pieza pieza;
+	Pieza pieza; 
 	pieza.rellenarPos();
-	// Pieza* ptrPeonB1 = new Pieza("Peon", 1, 0, 1);
-	Peon* ptrPeonB1 = new Peon(1, 1, 0, 1, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, 1, 1, "Peon");  //Actualizar las posiciones
+
+	Peon* ptrPeonB1 = new Peon(1, 1, 0, 1, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, 1, 1, "Peon");
 	Peon* ptrPeonB3 = new Peon(3, 1, 2, 1, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, 3, 1, "Peon");
 
 	Peon* ptrPeonN1 = new Peon(1, 0, 0, 3, "Peon"); Peon* ptrPeonN2 = new Peon(2, 0, 1, 3, "Peon");
@@ -31,10 +31,12 @@ int main(int argc,char* argv[])
 	Torre* ptrTorreB1 = new Torre(1, 1, 0, 0, "Torre"); Torre* ptrTorreB2 = new Torre(2, 1, 3, 0, "Torre");
 	Torre* ptrTorreN1 = new Torre(1, 0, 0, 4, "Torre"); Torre* ptrTorreN2 = new Torre(2, 0, 3, 4, "Torre");
 
+
+	//PRUEBAS DE MOVIMIENTO
 	cout << "La posicion del peon numero " << ptrPeonB1->getNumPeon()<<" de color: "<< ptrPeonB1->getColor()<<" es : "<<" ("
 	<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 
-	ptrPeonB1->mover_arriba(1);
+	ptrPeonB1->mover_arriba(4);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 	ptrPeonB1->mover_arriba(1);
@@ -49,6 +51,15 @@ int main(int argc,char* argv[])
 	ptrPeonB1->mover_arriba(1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+
+	ptrPeonB1->mover_arr_dcha(1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
+		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+
+
+
+
+
 
 	//Inicializar el gestor de ventanas GLUT
 	//y crear la ventana
