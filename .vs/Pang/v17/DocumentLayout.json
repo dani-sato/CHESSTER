@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pang.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pang.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Peon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Peon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Peon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pang.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pang.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Torre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -53,56 +53,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Pang.cpp",
               "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pang.cpp",
               "RelativeDocumentMoniker": "src\\Pang.cpp",
               "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pang.cpp",
               "RelativeToolTip": "src\\Pang.cpp",
-              "ViewState": "AQIAADwAAAAAAAAAAAAQwE8AAAAAAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAwwEoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-25T16:24:38.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Peon.h",
               "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.h",
               "RelativeDocumentMoniker": "src\\Peon.h",
               "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.h",
               "RelativeToolTip": "src\\Peon.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAAACAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-25T16:24:38.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Pieza.cpp",
               "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.cpp",
               "RelativeDocumentMoniker": "src\\Pieza.cpp",
               "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.cpp",
               "RelativeToolTip": "src\\Pieza.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPsAAAA+AAAA",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAAALsBAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-25T16:24:38.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Tablero.cpp",
               "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.cpp",
               "RelativeDocumentMoniker": "src\\Tablero.cpp",
               "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.cpp",
               "RelativeToolTip": "src\\Tablero.cpp",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGIAAAAZAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAIAwwFAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-29T15:19:34.804Z",
               "EditorCaption": ""
@@ -115,14 +115,14 @@
               "RelativeDocumentMoniker": "src\\Peon.cpp",
               "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.cpp",
               "RelativeToolTip": "src\\Peon.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAAAJ4AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-25T16:25:04.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Tablero.h",
               "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.h",
               "RelativeDocumentMoniker": "src\\Tablero.h",
@@ -135,28 +135,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Pieza.h",
               "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.h",
               "RelativeDocumentMoniker": "src\\Pieza.h",
               "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.h",
               "RelativeToolTip": "src\\Pieza.h",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAAwAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-25T16:24:38.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Torre.cpp",
               "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.cpp",
               "RelativeDocumentMoniker": "src\\Torre.cpp",
               "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.cpp",
               "RelativeToolTip": "src\\Torre.cpp",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-27T15:51:20.632Z"
+              "WhenOpened": "2024-04-27T15:51:20.632Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -168,7 +169,8 @@
               "RelativeToolTip": "src\\Torre.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-27T15:51:02.538Z"
+              "WhenOpened": "2024-04-27T15:51:02.538Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

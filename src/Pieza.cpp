@@ -34,7 +34,7 @@ void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto d
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y) == true) {
-				//Eliminar pieza blanca (No se como hacerlo)
+				tablero.eliminarPieza(pos.x - casillas, pos.y);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x - casillas;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
@@ -57,7 +57,7 @@ void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto d
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y) == true) {
-				//Eliminar pieza Negra (No se como hacerlo)
+				tablero.eliminarPieza(pos.x - casillas, pos.y);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x - casillas;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
@@ -88,7 +88,7 @@ void Pieza::mover_dch(int casillas) { //Esta no esta acabada
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x + casillas, pos.y) == true) {
-				//Eliminar pieza blanca (No se como hacerlo)
+				tablero.eliminarPieza(pos.x + casillas, pos.y);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x + casillas;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
@@ -110,7 +110,7 @@ void Pieza::mover_dch(int casillas) { //Esta no esta acabada
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y) == true) {
-				//Eliminar pieza Negra (No se como hacerlo)
+				tablero.eliminarPieza(pos.x + casillas, pos.y);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x + casillas;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
@@ -141,7 +141,7 @@ void Pieza::mover_arriba(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x, pos.y + casillas) == true) {
-				//Eliminar pieza blanca (No se como hacerlo)
+				tablero.eliminarPieza(pos.x, pos.y + casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.y = pos.y + casillas;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
@@ -163,7 +163,7 @@ void Pieza::mover_arriba(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x, pos.y + casillas) == true) {
-				//Eliminar pieza Negra (No se como hacerlo)
+				tablero.eliminarPieza(pos.x, pos.y + casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.y = pos.y + casillas;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
@@ -195,7 +195,7 @@ void Pieza::mover_abajo(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x, pos.y - casillas) == true) {
-				//Eliminar pieza blanca (No se como hacerlo)
+				tablero.eliminarPieza(pos.x, pos.y - casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.y = pos.y - casillas;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
@@ -217,7 +217,7 @@ void Pieza::mover_abajo(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x, pos.y - casillas) == true) {
-				//Eliminar pieza Negra (No se como hacerlo)
+				tablero.eliminarPieza(pos.x, pos.y - casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.y = pos.y - casillas;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
@@ -248,7 +248,6 @@ void Pieza::mover_arr_dcha(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x + casillas, pos.y + casillas) == true) {
-				//Eliminar pieza blanca (No se como hacerlo)
 				tablero.eliminarPieza(pos.x + casillas, pos.y + casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x + casillas;
@@ -273,7 +272,7 @@ void Pieza::mover_arr_dcha(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y + casillas) == true) {
-				//Eliminar pieza Negra (No se como hacerlo)
+				tablero.eliminarPieza(pos.x + casillas, pos.y + casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x + casillas;
 				pos.y = pos.y + casillas;
@@ -306,7 +305,7 @@ void Pieza::mover_arr_izq(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y + casillas) == true) {
-				//Eliminar pieza blanca (No se como hacerlo)
+				tablero.eliminarPieza(pos.x - casillas, pos.y + casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x - casillas;
 				pos.y = pos.y + casillas;
@@ -330,7 +329,7 @@ void Pieza::mover_arr_izq(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y + casillas) == true) {
-				//Eliminar pieza Negra (No se como hacerlo)
+				tablero.eliminarPieza(pos.x - casillas, pos.y + casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x - casillas;
 				pos.y = pos.y + casillas;
@@ -362,7 +361,7 @@ void Pieza::mover_abajo_dcha(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x + casillas, pos.y - casillas) == true) {
-				//Eliminar pieza blanca (No se como hacerlo)
+				tablero.eliminarPieza(pos.x + casillas, pos.y - casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x + casillas;
 				pos.y = pos.y - casillas;
@@ -386,7 +385,7 @@ void Pieza::mover_abajo_dcha(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y - casillas) == true) {
-				//Eliminar pieza Negra (No se como hacerlo)
+				tablero.eliminarPieza(pos.x + casillas, pos.y - casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x + casillas;
 				pos.y = pos.y - casillas;
@@ -418,7 +417,7 @@ void Pieza::mover_abajo_izq(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y - casillas) == true) {
-				//Eliminar pieza blanca (No se como hacerlo)
+				tablero.eliminarPieza(pos.x - casillas, pos.y - casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x - casillas;
 				pos.y = pos.y - casillas;
@@ -442,7 +441,7 @@ void Pieza::mover_abajo_izq(int casillas) {
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y - casillas) == true) {
-				//Eliminar pieza Negra (No se como hacerlo)
+				tablero.eliminarPieza(pos.x - casillas, pos.y - casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x - casillas;
 				pos.y = pos.y - casillas;

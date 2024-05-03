@@ -29,6 +29,16 @@ int PeonN4x = 3; int PeonN4y = 3;
 int TorreN1x = 0; int TorreN1y = 4;
 int TorreN2x = 3; int TorreN2y = 4;
 
+//Piezas
+Peon* ptrPeonB1 = new Peon(1, 1, PeonB1x, PeonB1y, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, PeonB2x, PeonB2y, "Peon");
+Peon* ptrPeonB3 = new Peon(3, 1, PeonB3x, PeonB3y, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, PeonB4x, PeonB4y, "Peon");
+
+Peon* ptrPeonN1 = new Peon(1, 0, PeonN1x, PeonN1y, "Peon"); Peon* ptrPeonN2 = new Peon(2, 0, PeonN2x, PeonN2y, "Peon");
+Peon* ptrPeonN3 = new Peon(3, 0, PeonN3x, PeonN3y, "Peon"); Peon* ptrPeonN4 = new Peon(4, 0, PeonN4x, PeonN4y, "Peon");
+
+Torre* ptrTorreB1 = new Torre(1, 1, TorreB1x, TorreB1y, "Torre"); Torre* ptrTorreB2 = new Torre(2, 1, TorreB2x, TorreB2y, "Torre");
+Torre* ptrTorreN1 = new Torre(1, 0, TorreN1x, TorreN1y, "Torre"); Torre* ptrTorreN2 = new Torre(2, 0, TorreN2x, TorreN2y, "Torre");
+
 //los callback, funciones que seran llamadas automaticamente por la glut
 //cuando sucedan eventos
 //NO HACE FALTA LLAMARLAS EXPLICITAMENTE
@@ -41,37 +51,28 @@ int main(int argc,char* argv[])
 	Pieza pieza; 
 	pieza.rellenarPos();
 
-	Peon* ptrPeonB1 = new Peon(1, 1, PeonB1x, PeonB1y, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, PeonB2x, PeonB2y, "Peon");
-	Peon* ptrPeonB3 = new Peon(3, 1, PeonB3x, PeonB3y, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, PeonB4x, PeonB4y, "Peon");
-
-	Peon* ptrPeonN1 = new Peon(1, 0, PeonN1x, PeonN1y, "Peon"); Peon* ptrPeonN2 = new Peon(2, 0, PeonN2x, PeonN2y, "Peon");
-	Peon* ptrPeonN3 = new Peon(3, 0, PeonN3x, PeonN3y, "Peon"); Peon* ptrPeonN4 = new Peon(4, 0, PeonN4x, PeonN4y, "Peon");
-
-	Torre* ptrTorreB1 = new Torre(1, 1, TorreB1x, TorreB1y, "Torre"); Torre* ptrTorreB2 = new Torre(2, 1, TorreB2x, TorreB2y, "Torre");
-	Torre* ptrTorreN1 = new Torre(1, 0, TorreN1x, TorreN1y, "Torre"); Torre* ptrTorreN2 = new Torre(2, 0, TorreN2x, TorreN2y, "Torre");
-
 
 	//PRUEBAS DE MOVIMIENTO
 	cout << "La posicion del peon numero " << ptrPeonB1->getNumPeon()<<" de color: "<< ptrPeonB1->getColor()<<" es : "<<" ("
 	<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 
-	ptrPeonB1->mover_arriba(4,1);
+	ptrPeonB1->mover_arriba(4,1,1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
-	ptrPeonB1->mover_arriba(1,1);
+	ptrPeonB1->mover_arriba(1,1,1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
-	ptrPeonB1->mover_arriba(1,1);
+	ptrPeonB1->mover_arriba(1,1,1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
-	ptrPeonB1->mover_arriba(1,1);
+	ptrPeonB1->mover_arriba(1,1,1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
-	ptrPeonB1->mover_arriba(1,1);
+	ptrPeonB1->mover_arriba(1,1,1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 
-	ptrPeonB1->mover_arr_dcha(1,1);
+	ptrPeonB1->mover_arr_dcha(1,1,1);
 	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
 		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
 

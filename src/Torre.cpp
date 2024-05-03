@@ -3,6 +3,14 @@
 
 using namespace std;
 
+//Posicion Torres Blancas
+extern int TorreB1x;extern int TorreB1y;
+extern int TorreB2x;extern int TorreB2y;
+
+//Posicion Torres Negras
+extern int TorreN1x; extern int TorreN1y;
+extern int TorreN2x; extern int TorreN2y;
+
 void Torre::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto de vista de  la torre. x es el numero de casillas
 	Pieza::mover_izq(casillas);
 }

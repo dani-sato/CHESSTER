@@ -18,14 +18,15 @@ extern int PeonN2x; extern int PeonN2y;
 extern int PeonN3x; extern int PeonN3y;
 extern int PeonN4x; extern int PeonN4y;
 
-void Peon::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto de vista del peon
+void Peon::mover_izq(int casillas,int color, int num) { //Izquierda de la pantalla, no del punto de vista del peon
 	cout << "Un peon no puede moverse a un lado" << endl;
 }
-void Peon::mover_dch(int casillas) {
+void Peon::mover_dch(int casillas, int color, int num) {
 	cout << "Un peon no puede moverse a un lado" << endl;
 }
-void Peon::mover_arriba(int casillas, int num){
+void Peon::mover_arriba(int casillas, int color, int num){
 	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorBlanca(getPosx(), getPosy() + casillas)==false && tablero.esPosOcupadaPorNegra(getPosx(), getPosy() + casillas) == false) { //Esto funciona bien para controlar los limites del tablero 
+		Pieza::mover_arriba(casillas);
 		switch (num)
 		{
 		case 1: PeonB1y = PeonB1y + casillas;
@@ -39,14 +40,14 @@ void Peon::mover_arriba(int casillas, int num){
 		default:
 			break;
 		}
-		Pieza::mover_arriba(casillas);
 	}
 	else {
 		cout << "Un peon no puede retroceder su posicion ni avanzar mas de una posicion" << endl;
 	}
 }
-void Peon::mover_abajo(int casillas, int num) {
+void Peon::mover_abajo(int casillas, int color, int num) {
 	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorBlanca(getPosx(), getPosy() - casillas) == false && tablero.esPosOcupadaPorNegra(getPosx(), getPosy() - casillas) == false) { //Esto funciona bien para controlar los limites del tablero 
+		Pieza::mover_abajo(casillas);
 		switch (num)
 		{
 		case 1: PeonN1y = PeonN1y - casillas;
@@ -60,15 +61,15 @@ void Peon::mover_abajo(int casillas, int num) {
 		default:
 			break;
 		}
-		Pieza::mover_abajo(casillas);
 	}
 	else {
 		cout << "Un peon no puede retroceder su posicion ni avanzar mas de una posicion" << endl;
 	}
 }
 
-void Peon::mover_arr_dcha(int casillas, int num) {
+void Peon::mover_arr_dcha(int casillas, int color, int num) {
 	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() + casillas, getPosy() + casillas)) {
+		Pieza::mover_arr_dcha(casillas);
 		switch (num)
 		{
 		case 1:
@@ -79,25 +80,25 @@ void Peon::mover_arr_dcha(int casillas, int num) {
 			PeonB2x = PeonB2x + casillas;
 			PeonB2y = PeonB2y + casillas;
 			break;
-		case 3: 
+		case 3:
 			PeonB3x = PeonB3x + casillas;
 			PeonB3y = PeonB3y + casillas;
 			break;
-		case 4: 
+		case 4:
 			PeonB4x = PeonB4x + casillas;
 			PeonB4y = PeonB4y + casillas;
 			break;
 		default:
 			break;
 		}
-		Pieza::mover_arr_dcha(casillas);
 	}
 	else {
 		cout << "Un peon no puede retroceder su posicion ni avanzar mas de una posicion" << endl;
 	}
 }
-void Peon::mover_arr_izq(int casillas, int num) {
+void Peon::mover_arr_izq(int casillas, int color, int num) {
 	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() - casillas, getPosy() + casillas)) {
+		Pieza::mover_arr_izq(casillas);
 		switch (num)
 		{
 		case 1:
@@ -119,14 +120,14 @@ void Peon::mover_arr_izq(int casillas, int num) {
 		default:
 			break;
 		}
-		Pieza::mover_arr_izq(casillas);
 	}
 	else {
 		cout << "Un peon no puede retroceder su posicion ni avanzar mas de una posicion" << endl;
 	}
 }
-void Peon::mover_abajo_dcha(int casillas, int num) {
+void Peon::mover_abajo_dcha(int casillas, int color, int num) {
 	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() + casillas, getPosy() - casillas)) {
+		Pieza::mover_abajo_dcha(casillas);
 		switch (num)
 		{
 		case 1:
@@ -148,14 +149,14 @@ void Peon::mover_abajo_dcha(int casillas, int num) {
 		default:
 			break;
 		}
-		Pieza::mover_abajo_dcha(casillas);
 	}
 	else {
 		cout << "Un peon no puede retroceder su posicion ni avanzar mas de una posicion" << endl;
 	}
 }
-void Peon::mover_abajo_izq(int casillas, int num) {
+void Peon::mover_abajo_izq(int casillas, int color, int num) {
 	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() - casillas, getPosy() - casillas)) {
+		Pieza::mover_abajo_izq(casillas);
 		switch (num)
 		{
 		case 1:
@@ -177,7 +178,6 @@ void Peon::mover_abajo_izq(int casillas, int num) {
 		default:
 			break;
 		}
-		Pieza::mover_abajo_izq(casillas);
 	}
 	else {
 		cout << "Un peon no puede retroceder su posicion ni avanzar mas de una posicion" << endl;

@@ -19,16 +19,16 @@ public:
 		setColor(color_c);
 		cout << "Se ha creado el peon de color " << getColor() <<" numero " << numPeon << " y toma la posicion: " << x_c << y_c << endl;
 	}
-	~Peon() { cout << "Peon" << numPeon << " destruido" << endl; }
+	~Peon() { cout << "Peon " << numPeon << " destruido" << endl; }
 	int getNumPeon() { return numPeon; }
 
-	void mover_izq(int casillas);
-	void mover_dch(int casillas);
-	void mover_arriba(int casillas, int num);
-	void mover_abajo(int casillas, int num);
-	void mover_arr_dcha(int casillas, int num);
-	void mover_arr_izq(int casillas, int num);
-	void mover_abajo_dcha(int casillas, int num);
-	void mover_abajo_izq(int casillas, int num);
+	void mover_izq(int casillas, int color, int num);
+	void mover_dch(int casillas, int color, int num);
+	void mover_arriba(int casillas,int color, int num);
+	void mover_abajo(int casillas,int color, int num);
+	void mover_arr_dcha(int casillas,int color, int num);
+	void mover_arr_izq(int casillas,int color, int num);
+	void mover_abajo_dcha(int casillas,int color, int num);
+	void mover_abajo_izq(int casillas,int color, int num);
 
 };
