@@ -2,6 +2,7 @@
 #include "Tablero.h"
 #include "Pieza.h"
 
+/*
 using namespace std;
 
 extern Tablero tablero;
@@ -101,3 +102,4 @@ void Rey::mover_abajo_izq(int casillas, int color) {
 		cout << "El rey no puede avanzar mas de una posicion" << endl;
 	}
 }
+*/

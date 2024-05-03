@@ -68,7 +68,7 @@ void Peon::mover_abajo(int casillas, int color, int num) {
 }
 
 void Peon::mover_arr_dcha(int casillas, int color, int num) {
-	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() + casillas, getPosy() + casillas)) {
+	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() + casillas, getPosy() + casillas)==true) {
 		Pieza::mover_arr_dcha(casillas);
 		switch (num)
 		{
@@ -97,7 +97,7 @@ void Peon::mover_arr_dcha(int casillas, int color, int num) {
 	}
 }
 void Peon::mover_arr_izq(int casillas, int color, int num) {
-	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() - casillas, getPosy() + casillas)) {
+	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() - casillas, getPosy() + casillas)==true) {
 		Pieza::mover_arr_izq(casillas);
 		switch (num)
 		{
@@ -126,7 +126,7 @@ void Peon::mover_arr_izq(int casillas, int color, int num) {
 	}
 }
 void Peon::mover_abajo_dcha(int casillas, int color, int num) {
-	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() + casillas, getPosy() - casillas)) {
+	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorBlanca(getPosx() + casillas, getPosy() - casillas)==true) {
 		Pieza::mover_abajo_dcha(casillas);
 		switch (num)
 		{
@@ -155,7 +155,7 @@ void Peon::mover_abajo_dcha(int casillas, int color, int num) {
 	}
 }
 void Peon::mover_abajo_izq(int casillas, int color, int num) {
-	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorNegra(getPosx() - casillas, getPosy() - casillas)) {
+	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorBlanca(getPosx() - casillas, getPosy() - casillas)==true) {
 		Pieza::mover_abajo_izq(casillas);
 		switch (num)
 		{
