@@ -95,7 +95,7 @@ void Rey::mover_arr_dcha(int casillas, int color) {
 void Rey::mover_arr_izq(int casillas, int color) {
 	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorBlanca(getPosx() - casillas, getPosy() + casillas) == false) {
 		Pieza::mover_arr_izq(casillas);
-	
+
 		ReyBx = ReyBx - casillas;
 		ReyBy = ReyBy + casillas;
 
