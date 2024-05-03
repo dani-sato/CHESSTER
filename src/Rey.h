@@ -1,29 +1,45 @@
 #pragma once
 
-#include"ETSIDI.h"
-#include "Pieza.h"
-#include <iostream>
+#include<iostream>
+#include "ETSIDI.h"
 
-using namespace std;
-
-class Rey :public Pieza {
-
+class Rey {
+private:
+	ETSIDI::Vector2D pos;
+	int color; //0 Negro 1 Blanco
 public:
-	Rey(int color_c = 0, int x_c = 0, int y_c = 0, string tipo_c = "Vacio") {
-		setPosx(x_c);
-		setPosy(y_c);
-		setColor(color_c);
-		cout << "Se ha creado el rey de color " << getColor() << " y toma la posicion: " << x_c << y_c << endl;
+	Rey(int color_c, float x_c, float y_c) { //Constructor
+		pos.x = x_c;
+		pos.y = y_c;
+		color = color_c;
 	}
-	~Rey() { cout << "Rey destruido" << endl; }
 
-	void mover_izq(int casillas, int color);
-	void mover_dch(int casillas, int color);
-	void mover_arriba(int casillas, int color);
-	void mover_abajo(int casillas, int color);
-	void mover_arr_dcha(int casillas, int color);
-	void mover_arr_izq(int casillas, int color);
-	void mover_abajo_dcha(int casillas, int color);
-	void mover_abajo_izq(int casillas, int color);
-
+	void mover_izq() { //Izquierda de la pantalla, no del punto de vista del peon
+			pos.x -= - 1;
+	}
+	void mover_dch() {
+		pos.x += 1;
+	}
+	void mover_arriba() {
+		pos.y += 1;
+	}
+	void mover_abajo() {
+		pos.y -= 1;
+	}
+	void mover_arr_dcha() {
+		pos.x += 1;
+		pos.y += 1;
+	}
+	void mover_arr_izq() {
+		pos.x += 1;
+		pos.y += 1;
+	}
+	void mover_abajo_dcha() {
+		pos.x += 1;
+		pos.y -= 1;
+	}
+	void mover_abajo_izq() {
+		pos.x -= 1;
+		pos.y -= 1;
+	}
 };
