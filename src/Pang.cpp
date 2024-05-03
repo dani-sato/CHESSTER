@@ -2,6 +2,7 @@
 #include "Pieza.h"
 #include "Peon.h"
 #include "Torre.h"
+#include "Rey.h"
 #include "freeglut.h"
 #include "Tablero.h"
 #include<iostream>
@@ -20,6 +21,8 @@ int PeonB4x = 3; int PeonB4y = 1;
 int TorreB1x = 0; int TorreB1y = 0;
 int TorreB2x = 3; int TorreB2y = 0;
 
+int ReyBx = 2; int ReyBy = 0;
+
 //NEGRAS
 int PeonN1x = 0; int PeonN1y = 3;
 int PeonN2x = 1; int PeonN2y = 3;
@@ -28,6 +31,8 @@ int PeonN4x = 3; int PeonN4y = 3;
 
 int TorreN1x = 0; int TorreN1y = 4;
 int TorreN2x = 3; int TorreN2y = 4;
+
+int ReyNx = 2; int ReyNy = 4;
 
 //Piezas
 Peon* ptrPeonB1 = new Peon(1, 1, PeonB1x, PeonB1y, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, PeonB2x, PeonB2y, "Peon");
@@ -38,6 +43,9 @@ Peon* ptrPeonN3 = new Peon(3, 0, PeonN3x, PeonN3y, "Peon"); Peon* ptrPeonN4 = ne
 
 Torre* ptrTorreB1 = new Torre(1, 1, TorreB1x, TorreB1y, "Torre"); Torre* ptrTorreB2 = new Torre(2, 1, TorreB2x, TorreB2y, "Torre");
 Torre* ptrTorreN1 = new Torre(1, 0, TorreN1x, TorreN1y, "Torre"); Torre* ptrTorreN2 = new Torre(2, 0, TorreN2x, TorreN2y, "Torre");
+
+Rey* ptrReyB = new Rey(1, ReyBx, ReyBy, "Rey");
+Rey* ptrReyN = new Rey(0, ReyNx, ReyNy, "Rey");
 
 //los callback, funciones que seran llamadas automaticamente por la glut
 //cuando sucedan eventos

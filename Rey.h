@@ -7,8 +7,6 @@
 using namespace std;
 
 class Rey :public Pieza {
-private:
-	int numRey;
 
 public:
 	Rey(int color_c = 0, int x_c = 0, int y_c = 0, string tipo_c = "Vacio") {

@@ -1,53 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\",
+  "WorkspaceRootPath": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Peon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Torre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\Rey.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:Rey.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pang.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pang.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pang.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\Rey.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:Rey.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\Rey.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:Rey.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Peon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Peon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Torre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Torre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\lib\\ETSIDI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\Rey.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:Rey.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Peon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Peon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Torre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:src\\Torre.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\lib\\ETSIDI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E575FADE-B6EB-4154-A1ED-8067A12EAE98}|Pang.vcxproj|solutionrelative:lib\\ETSIDI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -61,15 +61,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "Rey.cpp",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\Rey.cpp",
+              "RelativeDocumentMoniker": "Rey.cpp",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\Rey.cpp",
+              "RelativeToolTip": "Rey.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-03T14:21:34.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Peon.cpp",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Peon.cpp",
+              "RelativeDocumentMoniker": "src\\Peon.cpp",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Peon.cpp",
+              "RelativeToolTip": "src\\Peon.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-03T14:22:12.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pang.cpp",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pang.cpp",
+              "RelativeDocumentMoniker": "src\\Pang.cpp",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pang.cpp",
+              "RelativeToolTip": "src\\Pang.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-25T16:24:38.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Torre.cpp",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.cpp",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Torre.cpp",
               "RelativeDocumentMoniker": "src\\Torre.cpp",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.cpp",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Torre.cpp",
               "RelativeToolTip": "src\\Torre.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -78,139 +117,102 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Rey.cpp",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\Rey.cpp",
-              "RelativeDocumentMoniker": "Rey.cpp",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\Rey.cpp",
-              "RelativeToolTip": "Rey.cpp",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAGgAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-03T14:21:34.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Torre.h",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.h",
-              "RelativeDocumentMoniker": "src\\Torre.h",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Torre.h",
-              "RelativeToolTip": "src\\Torre.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-27T15:51:02.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Pang.cpp",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pang.cpp",
-              "RelativeDocumentMoniker": "src\\Pang.cpp",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pang.cpp",
-              "RelativeToolTip": "src\\Pang.cpp",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAC8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-25T16:24:38.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Rey.h",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\Rey.h",
-              "RelativeDocumentMoniker": "Rey.h",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\Rey.h",
-              "RelativeToolTip": "Rey.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-03T14:16:44.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Peon.cpp",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.cpp",
-              "RelativeDocumentMoniker": "src\\Peon.cpp",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.cpp",
-              "RelativeToolTip": "src\\Peon.cpp",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEUAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-03T14:22:12.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "Pieza.cpp",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.cpp",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pieza.cpp",
               "RelativeDocumentMoniker": "src\\Pieza.cpp",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.cpp",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pieza.cpp",
               "RelativeToolTip": "src\\Pieza.cpp",
-              "ViewState": "AQIAABQBAAAAAAAAAAAAABsBAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-25T16:24:38.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Tablero.cpp",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.cpp",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Tablero.cpp",
               "RelativeDocumentMoniker": "src\\Tablero.cpp",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.cpp",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Tablero.cpp",
               "RelativeToolTip": "src\\Tablero.cpp",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACkAAAA5AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-29T15:19:34.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Tablero.h",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.h",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Tablero.h",
               "RelativeDocumentMoniker": "src\\Tablero.h",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Tablero.h",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Tablero.h",
               "RelativeToolTip": "src\\Tablero.h",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-25T16:24:54.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Pieza.h",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.h",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pieza.h",
               "RelativeDocumentMoniker": "src\\Pieza.h",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Pieza.h",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Pieza.h",
               "RelativeToolTip": "src\\Pieza.h",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-25T16:24:38.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Peon.h",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.h",
-              "RelativeDocumentMoniker": "src\\Peon.h",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\src\\Peon.h",
-              "RelativeToolTip": "src\\Peon.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAACAAAA",
+              "DocumentIndex": 4,
+              "Title": "Torre.h",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Torre.h",
+              "RelativeDocumentMoniker": "src\\Torre.h",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Torre.h",
+              "RelativeToolTip": "src\\Torre.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-25T16:24:38.302Z"
+              "WhenOpened": "2024-04-27T15:51:02.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rey.h",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\Rey.h",
+              "RelativeDocumentMoniker": "Rey.h",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\Rey.h",
+              "RelativeToolTip": "Rey.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-03T14:16:44.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Peon.h",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Peon.h",
+              "RelativeDocumentMoniker": "src\\Peon.h",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\src\\Peon.h",
+              "RelativeToolTip": "src\\Peon.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-25T16:24:38.302Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "ETSIDI.h",
-              "DocumentMoniker": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\lib\\ETSIDI.h",
+              "DocumentMoniker": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\lib\\ETSIDI.h",
               "RelativeDocumentMoniker": "lib\\ETSIDI.h",
-              "ToolTip": "C:\\Users\\Daniel Sato\\source\\repos\\trabajo2024\\tema4inicial_VS19x64\\lib\\ETSIDI.h",
+              "ToolTip": "C:\\Users\\Marcos\\Documents\\GitHub\\CHESSTER\\lib\\ETSIDI.h",
               "RelativeToolTip": "lib\\ETSIDI.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -221,9 +223,9 @@
               "DocumentIndex": 12,
               "Title": "Peon.cpp",
               "DocumentMoniker": "C:\\Users\\fut20\\OneDrive\\Documentos\\GitHub\\CHESSTER\\Peon.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\fut20\\OneDrive\\Documentos\\GitHub\\CHESSTER\\Peon.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\fut20\\OneDrive\\Documentos\\GitHub\\CHESSTER\\Peon.cpp",
               "ToolTip": "C:\\Users\\fut20\\OneDrive\\Documentos\\GitHub\\CHESSTER\\Peon.cpp",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\fut20\\OneDrive\\Documentos\\GitHub\\CHESSTER\\Peon.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\fut20\\OneDrive\\Documentos\\GitHub\\CHESSTER\\Peon.cpp",
               "ViewState": "AQIAABIAAAAAAAAAAAAAACEAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-25T16:24:39.074Z"

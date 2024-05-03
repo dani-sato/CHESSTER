@@ -1,6 +1,7 @@
 #include "Tablero.h"
 #include "Peon.h"
 #include "Torre.h"
+#include "Rey.h"
 
 //BLANCAS
 extern int PeonB1x; extern int PeonB1y;
@@ -11,6 +12,8 @@ extern int PeonB4x; extern int PeonB4y;
 extern int TorreB1x; extern int TorreB1y;
 extern int TorreB2x; extern int TorreB2y;
 
+extern int ReyBx; extern int ReyBy;
+
 //NEGRAS
 extern int PeonN1x; extern int PeonN1y;
 extern int PeonN2x; extern int PeonN2y;
@@ -19,6 +22,8 @@ extern int PeonN4x; extern int PeonN4y;
 
 extern int TorreN1x; extern int TorreN1y;
 extern int TorreN2x; extern int TorreN2y;
+
+extern int ReyNx; extern int ReyNy;
 
 
 extern Peon* ptrPeonB1; extern Peon* ptrPeonB2;
@@ -29,6 +34,9 @@ extern Peon* ptrPeonN3; extern Peon* ptrPeonN4;
 
 extern Torre* ptrTorreB1; extern Torre* ptrTorreB2;
 extern Torre* ptrTorreN1; extern Torre* ptrTorreN2;
+
+extern Rey* ptrReyB;
+extern Rey* ptrReyN;
 
 void Tablero::inicializarTablero() { 
 

@@ -3,6 +3,7 @@
 #include "freeglut.h" 
 #include "Peon.h"
 #include"Torre.h"
+#include "Rey.h"
 
 Tablero tablero;
 
@@ -14,6 +15,9 @@ extern Peon* ptrPeonN3 ; extern Peon* ptrPeonN4;
 
 extern Torre* ptrTorreB1; extern Torre* ptrTorreB2;
 extern Torre* ptrTorreN1; extern Torre* ptrTorreN2;
+
+extern Rey* ptrReyB;
+extern Rey* ptrReyN;
 
 void Pieza::rellenarPos() {
 	tablero.inicializarTablero();

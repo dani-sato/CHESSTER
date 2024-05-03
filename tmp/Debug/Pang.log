@@ -1,8 +1,293 @@
 ﻿  Rey.cpp
-C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(36,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(36,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "Rey.cpp")
   
-C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(38,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(38,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "Rey.cpp")
   
-  Pang.vcxproj -> C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\bin\Pang.exe
+  Pang.cpp
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(36,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Pang.cpp")
+  
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(38,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Pang.cpp")
+  
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pang.cpp(47,23): error C2661: 'Rey::Rey': ninguna función sobrecargada acepta 4 argumentos
+  C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pang.cpp(47,23):
+  al hacer coincidir la lista de argumentos '(int, int, int, const char [4])'
+  
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pang.cpp(48,23): error C2661: 'Rey::Rey': ninguna función sobrecargada acepta 4 argumentos
+  C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pang.cpp(48,23):
+  al hacer coincidir la lista de argumentos '(int, int, int, const char [4])'
+  
+  Pieza.cpp
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(36,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Pieza.cpp")
+  
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(38,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Pieza.cpp")
+  
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(36,57): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(36,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(40,59): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(40,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(41,48): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(41,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(42,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(42,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(44,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(44,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(49,59): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(49,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(50,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(50,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(52,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(52,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(59,59): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(59,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(63,58): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(63,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(64,48): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(64,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(65,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(65,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(67,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(67,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(72,58): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(72,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(73,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(73,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(75,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(75,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(90,58): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(90,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(94,59): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(94,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(95,48): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(95,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(96,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(96,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(98,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(98,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(103,59): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(103,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(104,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(104,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(106,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(106,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(112,59): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(112,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(116,58): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(116,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(117,48): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(117,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(118,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(118,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(120,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(120,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(125,58): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(125,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(126,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(126,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(128,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(128,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(143,50): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(143,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(147,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(147,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(148,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(148,30): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(149,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(149,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(151,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(151,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(156,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(156,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(157,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(157,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(159,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(159,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(165,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(165,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(169,50): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(169,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(170,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(170,30): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(171,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(171,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(173,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(173,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(178,58): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(178,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(179,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(179,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(181,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(181,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(197,50): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(197,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(201,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(201,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(202,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(202,30): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(203,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(203,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(205,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(205,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(210,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(210,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(211,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(211,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(213,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(213,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(219,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(219,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(223,50): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(223,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(224,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(224,30): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(225,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(225,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(227,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(227,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(232,50): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(232,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(233,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(233,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(235,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(235,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(250,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(250,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(254,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(254,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(255,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(255,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(256,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(256,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(259,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(259,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(264,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(264,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(265,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(265,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(268,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(268,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(274,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(274,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(278,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(278,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(279,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(279,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(280,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(280,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(283,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(283,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(288,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(288,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(289,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(289,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(292,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(292,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(307,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(307,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(311,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(311,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(312,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(312,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(313,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(313,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(316,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(316,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(321,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(321,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(322,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(322,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(325,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(325,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(331,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(331,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(335,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(335,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(336,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(336,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(337,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(337,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(340,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(340,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(345,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(345,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(346,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(346,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(349,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(349,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(363,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(363,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(367,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(367,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(368,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(368,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(369,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(369,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(372,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(372,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(377,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(377,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(378,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(378,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(381,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(381,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(387,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(387,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(391,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(391,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(392,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(392,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(393,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(393,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(396,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(396,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(401,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(401,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(402,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(402,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(405,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(405,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(419,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(419,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(423,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(423,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(424,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(424,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(425,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(425,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(428,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(428,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(433,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(433,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(434,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(434,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(437,41): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(437,34): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(443,62): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(443,44): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(447,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(447,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(448,51): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(448,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(449,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(449,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(452,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(452,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(457,61): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(457,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(458,43): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(458,36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(461,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.cpp(461,35): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+  Torre.cpp
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(36,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Torre.cpp")
+  
+C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(38,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "src/Torre.cpp")
+  
+  Generando código...
