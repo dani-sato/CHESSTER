@@ -1,4 +1,19 @@
 #include "Tablero.h"
+#include "Peon.h"
+
+//BLANCAS
+extern int PeonB1x; extern int PeonB1y;
+extern int PeonB2x; extern int PeonB2y;
+extern int PeonB3x; extern int PeonB3y;
+extern int PeonB4x; extern int PeonB4y;
+
+//NEGRAS
+extern int PeonN1x; extern int PeonN1y;
+extern int PeonN2x; extern int PeonN2y;
+extern int PeonN3x; extern int PeonN3y;
+extern int PeonN4x; extern int PeonN4y;
+
+extern Peon* ptrPeonN2;
 
 void Tablero::inicializarTablero() { 
 
@@ -74,4 +89,14 @@ void Tablero::setTurno() {
 
 void Tablero::iniciarTurno() {
     turno = 1;
+}
+
+void Tablero::eliminarPieza(int x, int y) {
+    if (PeonB1x == x && PeonB1y == y) {
+        
+    }
+    if (PeonN2x == x && PeonN2y == y) {
+        delete ptrPeonN2;
+        cout << "Peon Negro 2 Eliminado" << endl;
+    }
 }

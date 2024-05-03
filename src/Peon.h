@@ -24,11 +24,11 @@ public:
 
 	void mover_izq(int casillas);
 	void mover_dch(int casillas);
-	void mover_arriba(int casillas);
-	void mover_abajo(int casillas);
-	void mover_arr_dcha(int casillas);
-	void mover_arr_izq(int casillas);
-	void mover_abajo_dcha(int casillas);
-	void mover_abajo_izq(int casillas);
+	void mover_arriba(int casillas, int num);
+	void mover_abajo(int casillas, int num);
+	void mover_arr_dcha(int casillas, int num);
+	void mover_arr_izq(int casillas, int num);
+	void mover_abajo_dcha(int casillas, int num);
+	void mover_abajo_izq(int casillas, int num);
 
 };

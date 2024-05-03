@@ -29,6 +29,8 @@ public:
     bool esPosOcupadaPorBlanca(int x, int y);
     bool esPosOcupadaPorNegra(int x, int y);
 
+    void eliminarPieza(int x, int y);
+
     //friend class Pieza;
     // ... Resto de la clase Tablero ...
 };

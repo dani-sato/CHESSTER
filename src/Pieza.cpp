@@ -1,8 +1,19 @@
 #include "Pieza.h"
 #include "Tablero.h"
 #include "freeglut.h" 
+#include "Peon.h"
+#include"Torre.h"
 
 Tablero tablero;
+
+extern Peon* ptrPeonB1; extern Peon* ptrPeonB2;
+extern Peon* ptrPeonB3 ; extern Peon* ptrPeonB4;
+
+extern Peon* ptrPeonN1; extern Peon* ptrPeonN2;
+extern Peon* ptrPeonN3 ; extern Peon* ptrPeonN4;
+
+extern Torre* ptrTorreB1; extern Torre* ptrTorreB2;
+extern Torre* ptrTorreN1; extern Torre* ptrTorreN2;
 
 void Pieza::rellenarPos() {
 	tablero.inicializarTablero();
@@ -27,7 +38,7 @@ void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto d
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x - casillas;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				cout << "Pieza comida" << endl; //Crear una funcion eliminarPieza(int x,int y) que elimine la que haya en esa pos
 				tablero.setTurno();
 				return;
 			}
@@ -175,6 +186,7 @@ void Pieza::mover_arriba(int casillas) {
 void Pieza::mover_abajo(int casillas) {
 	if ((pos.y - casillas) > getLimInf()) {
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
+		return;
 	}
 	else {
 		if (getColor() == 0) {
@@ -237,6 +249,7 @@ void Pieza::mover_arr_dcha(int casillas) {
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x + casillas, pos.y + casillas) == true) {
 				//Eliminar pieza blanca (No se como hacerlo)
+				tablero.eliminarPieza(pos.x + casillas, pos.y + casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x + casillas;
 				pos.y = pos.y + casillas;
@@ -314,6 +327,7 @@ void Pieza::mover_arr_izq(int casillas) {
 		if (getColor() == 1) {
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y + casillas) == true) {
 				cout << "No puedes realizar ese movimiento porque esa casilla esta ocupada" << endl;
+				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y + casillas) == true) {
 				//Eliminar pieza Negra (No se como hacerlo)
@@ -323,6 +337,7 @@ void Pieza::mover_arr_izq(int casillas) {
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				cout << "Pieza comida" << endl;
 				tablero.setTurno();
+				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y + casillas) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
@@ -368,6 +383,7 @@ void Pieza::mover_abajo_dcha(int casillas) {
 		if (getColor() == 1) {
 			if (tablero.esPosOcupadaPorBlanca(pos.x + casillas, pos.y - casillas) == true) {
 				cout << "No puedes realizar ese movimiento porque esa casilla esta ocupada" << endl;
+				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y - casillas) == true) {
 				//Eliminar pieza Negra (No se como hacerlo)
@@ -377,6 +393,7 @@ void Pieza::mover_abajo_dcha(int casillas) {
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				cout << "Pieza comida" << endl;
 				tablero.setTurno();
+				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y - casillas) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
@@ -422,6 +439,7 @@ void Pieza::mover_abajo_izq(int casillas) {
 		if (getColor() == 1) {
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y - casillas) == true) {
 				cout << "No puedes realizar ese movimiento porque esa casilla esta ocupada" << endl;
+				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y - casillas) == true) {
 				//Eliminar pieza Negra (No se como hacerlo)
@@ -431,6 +449,7 @@ void Pieza::mover_abajo_izq(int casillas) {
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				cout << "Pieza comida" << endl;
 				tablero.setTurno();
+				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y - casillas) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
