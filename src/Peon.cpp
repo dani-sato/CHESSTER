@@ -28,7 +28,7 @@ void Peon::mover_arriba(int casillas, int color, int num){
 	if (getColor() == 1 && casillas == 1 && tablero.esPosOcupadaPorBlanca(getPosx(), getPosy() + casillas) == false && tablero.esPosOcupadaPorNegra(getPosx(), getPosy() + casillas) == false) { //Esto funciona bien para controlar los limites del tablero 
 		Pieza::mover_arriba(casillas);
 		switch (num)
-		{
+		{ //Creo que estas posiciones no se pasan a la clase tablero actualizada. Por eso no se elimina una pieza cuando es comida despues de cambiar su posicion inicial
 		case 1: PeonB1y = PeonB1y + casillas;
 			break;
 		case 2: PeonB2y = PeonB2y + casillas;
@@ -46,7 +46,7 @@ void Peon::mover_arriba(int casillas, int color, int num){
 	}
 }
 void Peon::mover_abajo(int casillas, int color, int num) {
-	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorBlanca(getPosx(), getPosy() - casillas) == false && tablero.esPosOcupadaPorNegra(getPosx(), getPosy() - casillas) == false) { //Esto funciona bien para controlar los limites del tablero 
+	if (getColor() == 0 && casillas == 1 && tablero.esPosOcupadaPorBlanca(getPosx(), getPosy() - casillas) == false && tablero.esPosOcupadaPorNegra(getPosx(), getPosy() - casillas) == false) {
 		Pieza::mover_abajo(casillas);
 		switch (num)
 		{

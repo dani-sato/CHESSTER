@@ -188,7 +188,7 @@ void Pieza::mover_arriba(int casillas) {
 }
 
 void Pieza::mover_abajo(int casillas) {
-	if ((pos.y - casillas) > getLimInf()) {
+	if ((pos.y - casillas) < getLimInf()) {
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
 		return;
 	}

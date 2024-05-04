@@ -14,7 +14,7 @@ extern Tablero tablero;
 //VARIABLES PARA CONTROLAR LA PIEZA QUE HAY EN UNA CASILLA -> HABRIA QUE CAMBIAR LAS FUNCIONES DE PIEZA PARA QUE RECIBIESEN TAMBIEN ARGUMENTOS DE COLOR Y NUMERO DE PIEZA
 
 //BLANCAS
-int PeonB1x = 0; int PeonB1y = 1;
+int PeonB1x = 0; int PeonB1y = 1;  // Necesitamos usar como extern estas variables en otros archivos y que los cambios se guarden en todos ellos
 int PeonB2x = 1; int PeonB2y = 1;
 int PeonB3x = 2; int PeonB3y = 1;
 int PeonB4x = 3; int PeonB4y = 1;
@@ -62,33 +62,43 @@ int main(int argc,char* argv[])
 
 
 	//PRUEBAS DE MOVIMIENTO
-	cout << "La posicion del peon numero " << ptrPeonB1->getNumPeon()<<" de color: "<< ptrPeonB1->getColor()<<" es : "<<" ("
-	<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+	cout << "La posicion del peon numero " << ptrPeonB2->getNumPeon()<<" de color: "<< ptrPeonB2->getColor()<<" es : "<<" ("
+	<< ptrPeonB2->getPosx() << ", " << ptrPeonB2->getPosy() << ")" << endl;
 
-	ptrPeonB1->mover_arriba(4,1,1);
-	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
-		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
-	ptrPeonB1->mover_arriba(1,1,1);
-	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
-		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
-	ptrPeonB1->mover_arriba(1,1,1);
-	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
-		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
-	ptrPeonB1->mover_arriba(1,1,1);
-	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
-		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
-	ptrPeonB1->mover_arriba(1,1,1);
-	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
-		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+	cout << endl;
+	ptrPeonB2->mover_arriba(1,1,1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB2->getNumPeon() << " de color: " << ptrPeonB2->getColor() << " es : " << " ("
+		<< ptrPeonB2->getPosx() << ", " << ptrPeonB2->getPosy() << ")" << endl;
+	cout << endl;
 
-	ptrPeonB1->mover_arr_dcha(1,1,1);
-	cout << "La nueva posicion del peon numero " << ptrPeonB1->getNumPeon() << " de color: " << ptrPeonB1->getColor() << " es : " << " ("
-		<< ptrPeonB1->getPosx() << ", " << ptrPeonB1->getPosy() << ")" << endl;
+	ptrPeonN1->mover_abajo(1,1,1);
+	cout << "La nueva posicion del peon numero " << ptrPeonN1->getNumPeon() << " de color: " << ptrPeonN1->getColor() << " es : " << " ("
+		<< ptrPeonN1->getPosx() << ", " << ptrPeonN1->getPosy() << ")" << endl;
+	cout << endl;
 
+	ptrPeonB3->mover_arriba(1, 1, 1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB3->getNumPeon() << " de color: " << ptrPeonB3->getColor() << " es : " << " ("
+		<< ptrPeonB3->getPosx() << ", " << ptrPeonB3->getPosy() << ")" << endl;
+	cout << endl;
 
+	ptrPeonN4->mover_abajo_izq(1, 1, 1);
+	cout << "La nueva posicion del peon numero " << ptrPeonN4->getNumPeon() << " de color: " << ptrPeonN4->getColor() << " es : " << " ("
+		<< ptrPeonN4->getPosx() << ", " << ptrPeonN4->getPosy() << ")" << endl;
+	cout << endl;
 
+	ptrPeonB4->mover_arr_izq(1, 1, 1);
+	cout << "La nueva posicion del peon numero " << ptrPeonB4->getNumPeon() << " de color: " << ptrPeonB4->getColor() << " es : " << " ("
+		<< ptrPeonB4->getPosx() << ", " << ptrPeonB4->getPosy() << ")" << endl;
+	cout << endl;
 
+	ptrPeonN2->mover_abajo_dcha(1, 1, 1);
+	cout << "La nueva posicion del peon numero " << ptrPeonN2->getNumPeon() << " de color: " << ptrPeonN2->getColor() << " es : " << " ("
+		<< ptrPeonN2->getPosx() << ", " << ptrPeonN2->getPosy() << ")" << endl;
+	cout << endl;
 
+	ptrReyB->mover_arriba(1, 1);
+	cout << "La nueva posicion del rey de color: " << ptrReyB->getColor() << " es : " << " ("
+		<< ptrReyB->getPosx() << ", " << ptrReyB->getPosy() << ")" << endl;
 
 	//Inicializar el gestor de ventanas GLUT
 	//y crear la ventana

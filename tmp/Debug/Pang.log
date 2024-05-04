@@ -1,16 +1,8 @@
 ﻿  Pang.cpp
-C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(36,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(36,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "src/Pang.cpp")
   
-C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(38,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\src\Pieza.h(38,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "src/Pang.cpp")
   
-  Rey.cpp
-C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(36,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
-  (compilando archivo de origen "src/Rey.cpp")
-  
-C:\Users\Marcos\Documents\GitHub\CHESSTER\src\Pieza.h(38,28): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
-  (compilando archivo de origen "src/Rey.cpp")
-  
-  Generando código...
-  Pang.vcxproj -> C:\Users\Marcos\Documents\GitHub\CHESSTER\bin\Pang.exe
+  Pang.vcxproj -> C:\Users\Daniel Sato\source\repos\trabajo2024\tema4inicial_VS19x64\bin\Pang.exe
