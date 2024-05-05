@@ -7,16 +7,16 @@ using namespace std;
 extern Tablero tablero;
 
 //BLANCAS
-extern int PeonB1x; extern int PeonB1y;
-extern int PeonB2x; extern int PeonB2y;
-extern int PeonB3x; extern int PeonB3y;
-extern int PeonB4x; extern int PeonB4y;
+int PeonB1x = 0; int PeonB1y = 1;  // Necesitamos usar como extern estas variables en otros archivos y que los cambios se guarden en todos ellos
+int PeonB2x = 1; int PeonB2y = 1;
+int PeonB3x = 2; int PeonB3y = 1;
+int PeonB4x = 3; int PeonB4y = 1;
 
 //NEGRAS
-extern int PeonN1x; extern int PeonN1y;
-extern int PeonN2x; extern int PeonN2y;
-extern int PeonN3x; extern int PeonN3y;
-extern int PeonN4x; extern int PeonN4y;
+int PeonN1x = 0; int PeonN1y = 3;
+int PeonN2x = 1; int PeonN2y = 3;
+int PeonN3x = 2; int PeonN3y = 3;
+int PeonN4x = 3; int PeonN4y = 3;
 
 void Peon::mover_izq(int casillas,int color, int num) { //Izquierda de la pantalla, no del punto de vista del peon
 	cout << "Un peon no puede moverse a un lado" << endl;

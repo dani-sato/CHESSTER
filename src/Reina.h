@@ -15,7 +15,7 @@ public:
 		setColor(color_c);
 		cout << "Se ha creado la reina de color " << getColor() << " y toma la posicion: " << x_c << y_c << endl;
 	}
-	~Reina() { cout << "Rey destruido" << endl; }
+	~Reina() { cout << "Reina de color "<<getColor()<<" destruida" << endl; }
 
 	void mover_izq(int casillas, int color);
 	void mover_dch(int casillas, int color);

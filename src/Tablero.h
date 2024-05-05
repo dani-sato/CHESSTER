@@ -28,6 +28,7 @@ public:
 
     bool esPosOcupadaPorBlanca(int x, int y);
     bool esPosOcupadaPorNegra(int x, int y);
+    bool esCaminoLibre(int x1, int y1, int x2,int y2);
 
     void eliminarPieza(int x, int y);
 

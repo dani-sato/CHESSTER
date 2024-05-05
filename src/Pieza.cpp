@@ -31,9 +31,13 @@ void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto d
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
 		return;
 	}
+	if (tablero.esCaminoLibre(pos.x, pos.y, pos.x - casillas, pos.y) == false) {
+		cout << "No puedes hacer ese movimiento porque hay una pieza en medio del camino" << endl;
+		return;
+	}
 	else {
-		if (getColor() == 0) {
-			if (tablero.esPosOcupadaPorNegra(pos.x - casillas,pos.y) == true) {
+		if (getColor() == 0){
+			if (tablero.esPosOcupadaPorNegra(pos.x - casillas,pos.y) == true){
 				cout << "No puedes realizar ese movimiento porque esa casilla esta ocupada por una pieza amiga" << endl;
 				return;
 			}
@@ -84,6 +88,11 @@ void Pieza::mover_dch(int casillas) { //Esta no esta acabada
 	if ((pos.x + casillas) > getLimDch())
 	{
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
+		return;
+	}
+	if (tablero.esCaminoLibre(pos.x, pos.y, pos.x + casillas, pos.y) == false) {
+		cout << "No puedes hacer ese movimiento porque hay una pieza en medio del camino" << endl;
+		return;
 	}
 	else {
 		if (getColor() == 0) {
@@ -136,6 +145,10 @@ void Pieza::mover_arriba(int casillas) {
 	if ((pos.y + casillas) > getLimSup())
 	{
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
+		return;
+	}
+	if (tablero.esCaminoLibre(pos.x, pos.y, pos.x, pos.y+casillas) == false) {
+		cout << "No puedes hacer ese movimiento porque hay una pieza en medio del camino" << endl;
 		return;
 	}
 	else {
@@ -192,6 +205,10 @@ void Pieza::mover_abajo(int casillas) {
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
 		return;
 	}
+	if (tablero.esCaminoLibre(pos.x, pos.y, pos.x, pos.y - casillas) == false) {
+		cout << "No puedes hacer ese movimiento porque hay una pieza en medio del camino" << endl;
+		return;
+	}
 	else {
 		if (getColor() == 0) {
 			if (tablero.esPosOcupadaPorNegra(pos.x, pos.y - casillas) == true) {
@@ -243,6 +260,10 @@ void Pieza::mover_abajo(int casillas) {
 void Pieza::mover_arr_dcha(int casillas) {
 	if ((pos.x + casillas) > getLimDch() || (pos.y + casillas) > getLimSup()) {
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
+		return;
+	}
+	if (tablero.esCaminoLibre(pos.x, pos.y, pos.x+casillas, pos.y + casillas) == false) {
+		cout << "No puedes hacer ese movimiento porque hay una pieza en medio del camino" << endl;
 		return;
 	}
 	else {
@@ -302,6 +323,10 @@ void Pieza::mover_arr_izq(int casillas) {
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
 		return;
 	}
+	if (tablero.esCaminoLibre(pos.x, pos.y, pos.x-casillas, pos.y + casillas) == false) {
+		cout << "No puedes hacer ese movimiento porque hay una pieza en medio del camino" << endl;
+		return;
+	}
 	else {
 		if (getColor() == 0) {
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y + casillas) == true) {
@@ -358,6 +383,10 @@ void Pieza::mover_abajo_dcha(int casillas) {
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
 		return;
 	}
+	if (tablero.esCaminoLibre(pos.x, pos.y, pos.x+casillas, pos.y - casillas) == false) {
+		cout << "No puedes hacer ese movimiento porque hay una pieza en medio del camino" << endl;
+		return;
+	}
 	else {
 		if (getColor() == 0) {
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y - casillas) == true) {
@@ -412,6 +441,10 @@ void Pieza::mover_abajo_dcha(int casillas) {
 void Pieza::mover_abajo_izq(int casillas) {
 	if ((pos.x - casillas) < getLimInf() || (pos.y - casillas) < getLimInf()) {
 		cout << "No puedes realizar ese movimiento porque tu pieza saldria del tablero" << endl;
+		return;
+	}
+	if (tablero.esCaminoLibre(pos.x, pos.y, pos.x-casillas, pos.y-casillas) == false) {
+		cout << "No puedes hacer ese movimiento porque hay una pieza en medio del camino" << endl;
 		return;
 	}
 	else {

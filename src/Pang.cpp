@@ -14,26 +14,30 @@ extern Tablero tablero;
 //VARIABLES PARA CONTROLAR LA PIEZA QUE HAY EN UNA CASILLA -> HABRIA QUE CAMBIAR LAS FUNCIONES DE PIEZA PARA QUE RECIBIESEN TAMBIEN ARGUMENTOS DE COLOR Y NUMERO DE PIEZA
 
 //BLANCAS
-int PeonB1x = 0; int PeonB1y = 1;  // Necesitamos usar como extern estas variables en otros archivos y que los cambios se guarden en todos ellos
-int PeonB2x = 1; int PeonB2y = 1;
-int PeonB3x = 2; int PeonB3y = 1;
-int PeonB4x = 3; int PeonB4y = 1;
+extern int PeonB1x; extern int PeonB1y;  //No se actualizan los cambios
+extern int PeonB2x; extern int PeonB2y;
+extern int PeonB3x; extern int PeonB3y;
+extern int PeonB4x; extern int PeonB4y;
 
 int TorreB1x = 0; int TorreB1y = 0;
 int TorreB2x = 3; int TorreB2y = 0;
 
 int ReyBx = 2; int ReyBy = 0;
 
+int ReinaBx = 1; int ReinaBy = 0;
+
 //NEGRAS
-int PeonN1x = 0; int PeonN1y = 3;
-int PeonN2x = 1; int PeonN2y = 3;
-int PeonN3x = 2; int PeonN3y = 3;
-int PeonN4x = 3; int PeonN4y = 3;
+extern int PeonN1x; extern int PeonN1y;
+extern int PeonN2x; extern int PeonN2y;
+extern int PeonN3x; extern int PeonN3y;
+extern int PeonN4x; extern int PeonN4y;
 
 int TorreN1x = 0; int TorreN1y = 4;
 int TorreN2x = 3; int TorreN2y = 4;
 
 int ReyNx = 2; int ReyNy = 4;
+
+int ReinaNx = 1; int ReinaNy = 4;
 
 //Piezas
 Peon* ptrPeonB1 = new Peon(1, 1, PeonB1x, PeonB1y, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, PeonB2x, PeonB2y, "Peon");

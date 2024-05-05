@@ -4,7 +4,7 @@
 #include "Rey.h"
 
 //BLANCAS
-extern int PeonB1x; extern int PeonB1y;
+extern int PeonB1x; extern int PeonB1y;  //No se actualizan los cambios, por eso no entra en EliminarPieza
 extern int PeonB2x; extern int PeonB2y;
 extern int PeonB3x; extern int PeonB3y;
 extern int PeonB4x; extern int PeonB4y;
@@ -150,7 +150,7 @@ void Tablero::eliminarPieza(int x, int y) {
         cout << "Peon Negro 3 Eliminado" << endl;
         return;
     }
-    if (PeonN4x == x && PeonN4y == y) {
+    if (PeonB4x == x && PeonN4y == y) {
         delete ptrPeonN4;
         cout << "Peon Negro 4 Eliminado" << endl;
         return;
@@ -176,5 +176,112 @@ void Tablero::eliminarPieza(int x, int y) {
         delete ptrTorreN2;
         cout << "Torre Negra 2 Eliminada" << endl;
         return;
+    }
+}
+
+bool Tablero::esCaminoLibre(int x1, int y1, int x2, int y2) {
+
+    //MOVIMIENTOS HORIZONTALES
+    if (y1 == y2 && x2>x1) { //Movimiento horizontal a derecha y de mas de una casilla (Aquí se evaluan los caminos, no los movimientos de una sola casilla)
+        int x = x1;
+        for (int i = x1+1; i <x2; i++) { //Desde x1 hasta x2 
+            if (posicionesOcupadasPorBlanca[x+1][y1] == true || posicionesOcupadasPorNegra[x+1][y1] == true) {
+                cout << "Camino hacia derecha ocupado" << endl;
+                return false;
+            }
+            x++;
+        }
+        return true;
+    }
+    if (y1 == y2 && x2<x1) { //Movimiento horizontal a izquierda y de mas de una casilla (Aquí se evaluan los caminos, no los movimientos de una sola casilla)
+        int x = x1;
+        for (int i = x2; i > x1-1; i--) { //Desde x1 hasta x2 
+            if (posicionesOcupadasPorBlanca[x-1][y1] == true || posicionesOcupadasPorNegra[x-1][y1] == true) {
+                cout << "Camino hacia Izquierda ocupado" << endl;
+                return false;
+            }
+            x--;
+        }
+        return true;
+    }
+    
+    //MOVIMIENTOS VERTICALES
+    if (y2>y1 && x1==x2) { //Movimiento vertical hacia arriba y de mas de una casilla (Aquí se evaluan los caminos, no los movimientos de una sola casilla)
+        int y = y1;
+        for (int i = y1; i < y2; i++) { //Desde x1 hasta x2 
+            if (posicionesOcupadasPorBlanca[x1][y+1] == true || posicionesOcupadasPorNegra[x1][y+1] == true) {
+                cout << "Camino hacia arriba ocupado" << endl;
+                return false;
+            }
+            y++;
+        }
+        return true;
+    }
+
+    if (y2<y1 && x1 == x2) { //Movimiento vertical hacia abajo y de mas de una casilla (Aquí se evaluan los caminos, no los movimientos de una sola casilla)
+        int y = y1;
+        for (int i = y2; i > y1; i--) { //Desde x1 hasta x2 
+            if (posicionesOcupadasPorBlanca[x1][y1-1] == true || posicionesOcupadasPorNegra[x1][y1-1] == true) {
+                cout << "Camino hacia Abajo ocupado" << endl;
+                return false;
+            }
+            y--;
+        }
+        return true;
+    }
+
+    //MOVIMIENTOS DIAGONALES
+    if (x2 > x1 && y2 > y1) { //Arriba Derecha
+        int x = x1;
+        int y = y1;
+        for (int i = x1+1; i < x2; i++) {
+            if (posicionesOcupadasPorBlanca[x+1][y+1] == true || posicionesOcupadasPorNegra[x+1][y+1] == true) {
+                cout << "Camino Arriba derecha ocupado" << endl;
+                return false;
+            }
+            x++;
+            y++;
+        }
+        return true;
+    }
+    
+    if (x2 < x1 && y2 > y1) { //Arriba Izquierda
+        for (int i = x2; i > x1-1; i--) {
+            int x = x1;
+            int y = y1;
+            if (posicionesOcupadasPorBlanca[x-1][y + 1] == true || posicionesOcupadasPorNegra[x-1][y + 1] == true) {
+                cout << "Camino Arriba Izquierda ocupado" << endl;
+                return false;
+            }
+            x--;
+            y++;
+        }
+        return true;
+    }
+    if (x2 > x1 && y2 < y1) { //Abajo derecha
+        for (int i = x1+1; i <x2 ; i++) {
+            int x = x1;
+            int y = y1;
+            if (posicionesOcupadasPorBlanca[x+1][y - 1] == true || posicionesOcupadasPorNegra[x + 1][y- 1] == true) {
+                cout << "Camino Abajo derecha ocupado" << endl;
+                return false;
+            }
+            x++;
+            y--;
+        }
+        return true;
+    }
+    if (x2 < x1 && y2 < y1) { //Abajo izquierda
+        int x = x1;
+        int y = y1;
+        for (int i = x2; i > x1-1; i--) {
+            if (posicionesOcupadasPorBlanca[x - 1][y - 1] == true || posicionesOcupadasPorNegra[x - 1][y - 1] == true) {
+                cout << "Camino Abajo izquierda ocupado" << endl;
+                return false;
+            }
+            x--;
+            y--;
+        }
+        return true;
     }
 }
