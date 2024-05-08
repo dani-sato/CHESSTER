@@ -10,7 +10,7 @@ Tablero tablero;
 void Pieza::rellenarPos() {
 	tablero.inicializarTablero();
 	tablero.iniciarTurno();
-	tablero.pruebas();
+	tablero.partida();
 }
 
 void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto de vista del peon. x es el numero de casillas

@@ -34,8 +34,6 @@ void Tablero::inicializarTablero() {
             }
         }
     }
-
-
     for (int i = 0; i < 4; i++) {  //FUNCIONA MAL
         for (int j = 0; j < 5; j++) {
             if (posicionesOcupadasPorBlanca[i][j]==true) {
