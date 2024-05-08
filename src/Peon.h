@@ -10,14 +10,13 @@ using namespace std;
 class Peon :public Pieza {
 private:
 	int numPeon;
-
 public:
-	Peon(int numPeon_c = 0, int color_c = 0, int x_c = 0, int y_c = 0, string tipo_c = "Vacio") {
+	Peon(int numPeon_c = 0, int color_c = 0, int x_inicial = 0, int y_inicial = 0, string tipo_c = "Vacio") {
 		numPeon = numPeon_c;
-		setPosx(x_c);
-		setPosy(y_c);
+		setPosx(x_inicial);
+		setPosy(y_inicial);
 		setColor(color_c);
-		cout << "Se ha creado el peon de color " << getColor() <<" numero " << numPeon << " y toma la posicion: " << x_c << y_c << endl;
+		cout << "Se ha creado el peon de color " << getColor() <<" numero " << numPeon << " y toma la posicion: " << x_inicial << y_inicial << endl;
 	}
 	~Peon() { cout << "Peon " << numPeon << " destruido" << endl; }
 	int getNumPeon() { return numPeon; }

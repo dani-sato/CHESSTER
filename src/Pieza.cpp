@@ -7,21 +7,10 @@
 
 Tablero tablero;
 
-extern Peon* ptrPeonB1; extern Peon* ptrPeonB2;
-extern Peon* ptrPeonB3 ; extern Peon* ptrPeonB4;
-
-extern Peon* ptrPeonN1; extern Peon* ptrPeonN2;
-extern Peon* ptrPeonN3 ; extern Peon* ptrPeonN4;
-
-extern Torre* ptrTorreB1; extern Torre* ptrTorreB2;
-extern Torre* ptrTorreN1; extern Torre* ptrTorreN2;
-
-extern Rey* ptrReyB;
-extern Rey* ptrReyN;
-
 void Pieza::rellenarPos() {
 	tablero.inicializarTablero();
 	tablero.iniciarTurno();
+	tablero.pruebas();
 }
 
 void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto de vista del peon. x es el numero de casillas
@@ -44,15 +33,16 @@ void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto d
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y) == true) {
 				tablero.eliminarPieza(pos.x - casillas, pos.y);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
-				pos.x = pos.x - casillas;
+				pos.x = pos.x - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
-				cout << "Pieza comida" << endl; //Crear una funcion eliminarPieza(int x,int y) que elimine la que haya en esa pos
+				tablero.liberarPosPorBlanca(pos.x, pos.y);
+				cout << "Pieza Blanca comida" << endl; //Crear una funcion eliminarPieza(int x,int y) que elimine la que haya en esa pos
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y) == false) {
 				tablero.liberarPosPorNegra(pos.x, pos.y);
-				pos.x = pos.x - casillas;
+				pos.x = pos.x - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -67,15 +57,16 @@ void Pieza::mover_izq(int casillas) { //Izquierda de la pantalla, no del punto d
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y) == true) {
 				tablero.eliminarPieza(pos.x - casillas, pos.y);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				pos.x = pos.x - casillas;
+				pos.x = pos.x - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorNegra(pos.x, pos.y);
+				cout << "Pieza Negra comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				pos.x = pos.x - casillas;
+				pos.x = pos.x - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -103,15 +94,16 @@ void Pieza::mover_dch(int casillas) { //Esta no esta acabada
 			if (tablero.esPosOcupadaPorBlanca(pos.x + casillas, pos.y) == true) {
 				tablero.eliminarPieza(pos.x + casillas, pos.y);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
-				pos.x = pos.x + casillas;
+				pos.x = pos.x + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorBlanca(pos.x, pos.y);
+				cout << "Pieza Blanca comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x + casillas, pos.y) == false) {
 				tablero.liberarPosPorNegra(pos.x, pos.y);
-				pos.x = pos.x + casillas;
+				pos.x = pos.x + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -125,15 +117,16 @@ void Pieza::mover_dch(int casillas) { //Esta no esta acabada
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y) == true) {
 				tablero.eliminarPieza(pos.x + casillas, pos.y);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				pos.x = pos.x + casillas;
+				pos.x = pos.x + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorNegra(pos.x, pos.y);
+				cout << "Pieza Negra comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				pos.x = pos.x + casillas;
+				pos.x = pos.x + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -160,9 +153,10 @@ void Pieza::mover_arriba(int casillas) {
 			if (tablero.esPosOcupadaPorBlanca(pos.x, pos.y + casillas) == true) {
 				tablero.eliminarPieza(pos.x, pos.y + casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorBlanca(pos.x, pos.y);
+				cout << "Pieza Blanca comida" << endl;
 				tablero.setTurno();
 				return;
 			}
@@ -182,15 +176,16 @@ void Pieza::mover_arriba(int casillas) {
 			if (tablero.esPosOcupadaPorNegra(pos.x, pos.y + casillas) == true) {
 				tablero.eliminarPieza(pos.x, pos.y + casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorNegra(pos.x, pos.y);
+				cout << "Pieza Negra comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -218,15 +213,16 @@ void Pieza::mover_abajo(int casillas) {
 			if (tablero.esPosOcupadaPorBlanca(pos.x, pos.y - casillas) == true) {
 				tablero.eliminarPieza(pos.x, pos.y - casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
+				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				cout << "Pieza comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x, pos.y - casillas) == false) {
 				tablero.liberarPosPorNegra(pos.x, pos.y);
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -240,9 +236,10 @@ void Pieza::mover_abajo(int casillas) {
 			if (tablero.esPosOcupadaPorNegra(pos.x, pos.y - casillas) == true) {
 				tablero.eliminarPieza(pos.x, pos.y - casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorNegra(pos.x, pos.y);
+				cout << "Pieza Negra comida" << endl;
 				tablero.setTurno();
 				return;
 			}
@@ -276,9 +273,10 @@ void Pieza::mover_arr_dcha(int casillas) {
 				tablero.eliminarPieza(pos.x + casillas, pos.y + casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x + casillas;
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorBlanca(pos.x, pos.y);
+				cout << "Pieza Blanca comida" << endl;
 				tablero.setTurno();
 				return;
 			}
@@ -300,16 +298,17 @@ void Pieza::mover_arr_dcha(int casillas) {
 				tablero.eliminarPieza(pos.x + casillas, pos.y + casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x + casillas;
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorNegra(pos.x, pos.y);
+				cout << "Pieza Negra comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y + casillas) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x + casillas;
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -337,8 +336,9 @@ void Pieza::mover_arr_izq(int casillas) {
 				tablero.eliminarPieza(pos.x - casillas, pos.y + casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x - casillas;
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
+				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				cout << "Pieza comida" << endl;
 				tablero.setTurno();
 				return;
@@ -346,7 +346,7 @@ void Pieza::mover_arr_izq(int casillas) {
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y + casillas) == false) {
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x - casillas;
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -361,16 +361,17 @@ void Pieza::mover_arr_izq(int casillas) {
 				tablero.eliminarPieza(pos.x - casillas, pos.y + casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x - casillas;
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorNegra(pos.x, pos.y);
+				cout << "Pieza Negra comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y + casillas) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x - casillas;
-				pos.y = pos.y + casillas;
+				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -397,16 +398,17 @@ void Pieza::mover_abajo_dcha(int casillas) {
 				tablero.eliminarPieza(pos.x + casillas, pos.y - casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x + casillas;
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorBlanca(pos.x, pos.y);
+				cout << "Pieza Blanca comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x + casillas, pos.y - casillas) == false) {
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x + casillas;
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -421,16 +423,17 @@ void Pieza::mover_abajo_dcha(int casillas) {
 				tablero.eliminarPieza(pos.x + casillas, pos.y - casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x + casillas;
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorNegra(pos.x, pos.y);
+				cout << "Pieza Negra comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x + casillas, pos.y - casillas) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x + casillas;
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -457,8 +460,9 @@ void Pieza::mover_abajo_izq(int casillas) {
 				tablero.eliminarPieza(pos.x - casillas, pos.y - casillas);
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x - casillas;
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
+				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				cout << "Pieza comida" << endl;
 				tablero.setTurno();
 				return;
@@ -466,7 +470,7 @@ void Pieza::mover_abajo_izq(int casillas) {
 			if (tablero.esPosOcupadaPorBlanca(pos.x - casillas, pos.y - casillas) == false) {
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.x = pos.x - casillas;
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
 				tablero.setTurno();
 				return;
@@ -481,16 +485,17 @@ void Pieza::mover_abajo_izq(int casillas) {
 				tablero.eliminarPieza(pos.x - casillas, pos.y - casillas);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x - casillas;
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				tablero.liberarPosPorNegra(pos.x, pos.y);
+				cout << "Pieza Negra comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorNegra(pos.x - casillas, pos.y - casillas) == false) {
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
 				pos.x = pos.x - casillas;
-				pos.y = pos.y - casillas;
+				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorBlanca(pos.x, pos.y);
 				tablero.setTurno();
 				return;

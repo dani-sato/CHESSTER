@@ -16,6 +16,7 @@ public:
 
     Tablero() {}  //Rellenar el tablero. Todas las casillas a true (ocupada) excepto la fila de en medio a false (libre)
     
+
     void inicializarTablero();
     void iniciarTurno();
     void setTurno();
@@ -31,6 +32,9 @@ public:
     bool esCaminoLibre(int x1, int y1, int x2,int y2);
 
     void eliminarPieza(int x, int y);
+
+    void partida();
+    void dibujar_Tablero();
 
     //friend class Pieza;
     // ... Resto de la clase Tablero ...

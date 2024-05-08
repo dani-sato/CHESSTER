@@ -3,40 +3,18 @@
 #include "Torre.h"
 #include "Rey.h"
 
-//BLANCAS
-extern int PeonB1x; extern int PeonB1y;  //No se actualizan los cambios, por eso no entra en EliminarPieza
-extern int PeonB2x; extern int PeonB2y;
-extern int PeonB3x; extern int PeonB3y;
-extern int PeonB4x; extern int PeonB4y;
+Peon* ptrPeonB1 = new Peon(1, 1, 0, 1, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, 1, 1, "Peon");
+Peon* ptrPeonB3 = new Peon(3, 1, 2, 1, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, 3, 1, "Peon");
 
-extern int TorreB1x; extern int TorreB1y;
-extern int TorreB2x; extern int TorreB2y;
+Peon* ptrPeonN1 = new Peon(1, 0, 0, 3, "Peon"); Peon* ptrPeonN2 = new Peon(2, 0, 1, 3, "Peon");
+Peon* ptrPeonN3 = new Peon(3, 0, 2, 3, "Peon"); Peon* ptrPeonN4 = new Peon(4, 0, 3, 3, "Peon");
 
-extern int ReyBx; extern int ReyBy;
+Torre* ptrTorreB1 = new Torre(1, 1, 0, 0, "Torre"); Torre* ptrTorreB2 = new Torre(2, 1, 3, 0, "Torre");
+Torre* ptrTorreN1 = new Torre(1, 0, 0, 4, "Torre"); Torre* ptrTorreN2 = new Torre(2, 0, 3, 4, "Torre");
 
-//NEGRAS
-extern int PeonN1x; extern int PeonN1y;
-extern int PeonN2x; extern int PeonN2y;
-extern int PeonN3x; extern int PeonN3y;
-extern int PeonN4x; extern int PeonN4y;
+Rey* ptrReyB = new Rey(1, 2, 0, "Rey");
+Rey* ptrReyN = new Rey(0, 2, 4, "Rey");
 
-extern int TorreN1x; extern int TorreN1y;
-extern int TorreN2x; extern int TorreN2y;
-
-extern int ReyNx; extern int ReyNy;
-
-
-extern Peon* ptrPeonB1; extern Peon* ptrPeonB2;
-extern Peon* ptrPeonB3; extern Peon* ptrPeonB4;
-
-extern Peon* ptrPeonN1; extern Peon* ptrPeonN2;
-extern Peon* ptrPeonN3; extern Peon* ptrPeonN4;
-
-extern Torre* ptrTorreB1; extern Torre* ptrTorreB2;
-extern Torre* ptrTorreN1; extern Torre* ptrTorreN2;
-
-extern Rey* ptrReyB;
-extern Rey* ptrReyN;
 
 void Tablero::inicializarTablero() { 
 
@@ -56,6 +34,8 @@ void Tablero::inicializarTablero() {
             }
         }
     }
+
+
     for (int i = 0; i < 4; i++) {  //FUNCIONA MAL
         for (int j = 0; j < 5; j++) {
             if (posicionesOcupadasPorBlanca[i][j]==true) {
@@ -115,64 +95,65 @@ void Tablero::iniciarTurno() {
 }
 
 void Tablero::eliminarPieza(int x, int y) {
-    if (PeonB1x == x && PeonB1y == y) {
+    cout << "Entra el la funcion eliminarPieza" << endl;
+    if (ptrPeonB1->getPosx() == x && ptrPeonB1->getPosy() == y) {
         delete ptrPeonB1;
         cout << "Peon Blanco 1 Eliminado" << endl;
         return;
     }
-    if (PeonB2x == x && PeonB2y == y) {
+    if (ptrPeonB2->getPosx() == x && ptrPeonB2->getPosy() == y) {
         delete ptrPeonB2;
         cout << "Peon Blanco 2 Eliminado" << endl;
         return;
     }
-    if (PeonB3x == x && PeonB3y == y) {
+    if (ptrPeonB3->getPosx() == x && ptrPeonB3->getPosy() == y) {
         delete ptrPeonB3;
         cout << "Peon Blanco 3 Eliminado" << endl;
         return;
     }
-    if (PeonB4x == x && PeonB4y == y) {
+    if (ptrPeonB4->getPosx() == x && ptrPeonB4->getPosy() == y) {
         delete ptrPeonB4;
         cout << "Peon Blanco 4 Eliminado" << endl;
         return;
     }
-    if (PeonN1x == x && PeonN1y == y) {
+    if (ptrPeonN1->getPosx() == x && ptrPeonN1->getPosy() == y) {
         delete ptrPeonN1;
         cout << "Peon Negro 1 Eliminado" << endl;
         return;
     }
-    if (PeonN2x == x && PeonN2y == y) {
+    if (ptrPeonN2->getPosx() == x && ptrPeonN2->getPosy() == y) {
         delete ptrPeonN2;
         cout << "Peon Negro 2 Eliminado" << endl;
         return;
     }
-    if (PeonN3x == x && PeonN3y == y) {
+    if (ptrPeonN3->getPosx() == x && ptrPeonN3->getPosy() == y) {
         delete ptrPeonN3;
         cout << "Peon Negro 3 Eliminado" << endl;
         return;
     }
-    if (PeonB4x == x && PeonN4y == y) {
+    if (ptrPeonN4->getPosx() == x && ptrPeonN4->getPosy() == y) {
         delete ptrPeonN4;
         cout << "Peon Negro 4 Eliminado" << endl;
         return;
     }
 
-    if (TorreB1x == x && TorreB1y == y) {
+    if (ptrTorreB1->getPosx() == x && ptrTorreB1->getPosy() == y) {
         delete ptrTorreB1;
         cout << "Torre Blanca 1 Eliminada" << endl;
         return;
     }
-    if (TorreB2x == x && TorreB2y == y) {
+    if (ptrTorreB2->getPosx() == x && ptrTorreB2->getPosy() == y) {
         delete ptrTorreB2;
         cout << "Torre Blanca 2 Eliminada" << endl;
         return;
     }
     
-    if (TorreN1x == x && TorreN1y == y) {
+    if (ptrTorreN1->getPosx() == x && ptrTorreN1->getPosy() == y) {
         delete ptrTorreN1;
         cout << "Torre Negra 1 Eliminada" << endl;
         return;
     }
-    if (TorreN2x == x && TorreN2y == y) {
+    if (ptrTorreN2->getPosx() == x && ptrTorreN2->getPosy() == y) {
         delete ptrTorreN2;
         cout << "Torre Negra 2 Eliminada" << endl;
         return;
@@ -284,4 +265,49 @@ bool Tablero::esCaminoLibre(int x1, int y1, int x2, int y2) {
         }
         return true;
     }
+}
+
+void Tablero::partida() {
+    //PRUEBAS DE MOVIMIENTO
+    cout << "La posicion del peon numero " << ptrPeonB2->getNumPeon() << " de color: " << ptrPeonB2->getColor() << " es : " << " ("
+        << ptrPeonB2->getPosx() << ", " << ptrPeonB2->getPosy() << ")" << endl;
+
+    cout << endl;
+    ptrPeonB2->mover_arriba(1, 1, 1);
+    cout << "La nueva posicion del peon numero " << ptrPeonB2->getNumPeon() << " de color: " << ptrPeonB2->getColor() << " es : " << " ("
+        << ptrPeonB2->getPosx() << ", " << ptrPeonB2->getPosy() << ")" << endl;
+    cout << endl;
+
+    ptrPeonN1->mover_abajo(1, 1, 1);
+    cout << "La nueva posicion del peon numero " << ptrPeonN1->getNumPeon() << " de color: " << ptrPeonN1->getColor() << " es : " << " ("
+        << ptrPeonN1->getPosx() << ", " << ptrPeonN1->getPosy() << ")" << endl;
+    cout << endl;
+
+    ptrPeonB3->mover_arriba(1, 1, 1);
+    cout << "La nueva posicion del peon numero " << ptrPeonB3->getNumPeon() << " de color: " << ptrPeonB3->getColor() << " es : " << " ("
+        << ptrPeonB3->getPosx() << ", " << ptrPeonB3->getPosy() << ")" << endl;
+    cout << endl;
+
+    ptrPeonN4->mover_abajo_izq(1, 1, 1);
+    cout << "La nueva posicion del peon numero " << ptrPeonN4->getNumPeon() << " de color: " << ptrPeonN4->getColor() << " es : " << " ("
+        << ptrPeonN4->getPosx() << ", " << ptrPeonN4->getPosy() << ")" << endl;
+    cout << endl;
+
+    ptrPeonB4->mover_arr_izq(1, 1, 1);
+    cout << "La nueva posicion del peon numero " << ptrPeonB4->getNumPeon() << " de color: " << ptrPeonB4->getColor() << " es : " << " ("
+        << ptrPeonB4->getPosx() << ", " << ptrPeonB4->getPosy() << ")" << endl;
+    cout << endl;
+
+    ptrPeonN2->mover_abajo_dcha(1, 1, 1);
+    cout << "La nueva posicion del peon numero " << ptrPeonN2->getNumPeon() << " de color: " << ptrPeonN2->getColor() << " es : " << " ("
+        << ptrPeonN2->getPosx() << ", " << ptrPeonN2->getPosy() << ")" << endl;
+    cout << endl;
+
+    ptrReyB->mover_arriba(1, 1);
+    cout << "La nueva posicion del rey de color: " << ptrReyB->getColor() << " es : " << " ("
+        << ptrReyB->getPosx() << ", " << ptrReyB->getPosy() << ")" << endl;
+}
+
+void Tablero::dibujar_Tablero() {
+
 }
