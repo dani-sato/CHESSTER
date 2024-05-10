@@ -192,7 +192,6 @@ void Pieza::mover_arriba(int casillas) {
 			}
 		}
 	}
-
 }
 
 void Pieza::mover_abajo(int casillas) {
@@ -216,11 +215,12 @@ void Pieza::mover_abajo(int casillas) {
 				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				cout << "Pieza blanca comida" << endl;
 				tablero.setTurno();
 				return;
 			}
 			if (tablero.esPosOcupadaPorBlanca(pos.x, pos.y - casillas) == false) {
+				cout << "Ha entrado en linea 224 por que la ocupacion por blanca de la casilla"<< pos.x<< pos.y - casillas<<" es "<<tablero.esPosOcupadaPorBlanca(pos.x, pos.y - casillas) << endl;
 				tablero.liberarPosPorNegra(pos.x, pos.y);
 				pos.y = pos.y - casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
@@ -252,7 +252,23 @@ void Pieza::mover_abajo(int casillas) {
 			}
 		}
 	}
-
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (tablero.esPosOcupadaPorBlanca(i, j) == true && tablero.esPosOcupadaPorNegra(i, j) == true) {
+				cout << "-1 ";  // Ocupada por ambas
+			}
+			else if (tablero.esPosOcupadaPorBlanca(i, j) == true) {
+				cout << "1 ";   // Ocupada solo por blanca
+			}
+			else if (tablero.esPosOcupadaPorNegra(i, j) == true) {
+				cout << "0 ";   // Ocupada solo por negra
+			}
+			else {
+				cout << "- ";   // No ocupada
+			}
+		}
+		cout << endl;  // Salto de línea al final de cada fila
+	}
 }
 void Pieza::mover_arr_dcha(int casillas) {
 	if ((pos.x + casillas) > getLimDch() || (pos.y + casillas) > getLimSup()) {
@@ -339,7 +355,7 @@ void Pieza::mover_arr_izq(int casillas) {
 				pos.y = pos.y + casillas; cout << "La nueva posicion de la pieza es " << pos.x << pos.y << endl;
 				tablero.ocuparPosPorNegra(pos.x, pos.y);
 				tablero.liberarPosPorBlanca(pos.x, pos.y);
-				cout << "Pieza comida" << endl;
+				cout << "Pieza blanca comida" << endl;
 				tablero.setTurno();
 				return;
 			}

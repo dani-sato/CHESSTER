@@ -12,8 +12,6 @@ using namespace std;
 
 extern Tablero tablero;
 
-ETSIDI::Sprite peonb1{ "C:/Users/Daniel Sato/source/repos/trabajo2024/tema4inicial_VS19x64/imagenes/peonblanco.png", 0,0,1,1 };
-
 //los callback, funciones que seran llamadas automaticamente por la glut
 //cuando sucedan eventos
 //NO HACE FALTA LLAMARLAS EXPLICITAMENTE
@@ -68,9 +66,6 @@ void OnDraw(void)
 	gluLookAt(1.5, 2, 8,  // Posición del ojo: arriba del centro del tablero a 10 unidades de altura
 		1.5, 2, 0,   // Centro del tablero
 		0, 1, 0);      // Vector up en dirección Y
-
-
-	peonb1.draw();
 	
 	for (int i = 0; i < 5; i++) { // Filas
 		for (int j = 0; j < 4; j++) { // Columnas

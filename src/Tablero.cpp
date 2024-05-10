@@ -2,6 +2,7 @@
 #include "Peon.h"
 #include "Torre.h"
 #include "Rey.h"
+#include "Reina.h"
 
 Peon* ptrPeonB1 = new Peon(1, 1, 0, 1, "Peon"); Peon* ptrPeonB2 = new Peon(2, 1, 1, 1, "Peon");
 Peon* ptrPeonB3 = new Peon(3, 1, 2, 1, "Peon"); Peon* ptrPeonB4 = new Peon(4, 1, 3, 1, "Peon");
@@ -12,45 +13,46 @@ Peon* ptrPeonN3 = new Peon(3, 0, 2, 3, "Peon"); Peon* ptrPeonN4 = new Peon(4, 0,
 Torre* ptrTorreB1 = new Torre(1, 1, 0, 0, "Torre"); Torre* ptrTorreB2 = new Torre(2, 1, 3, 0, "Torre");
 Torre* ptrTorreN1 = new Torre(1, 0, 0, 4, "Torre"); Torre* ptrTorreN2 = new Torre(2, 0, 3, 4, "Torre");
 
+Reina* ptrReinaB = new Reina(1, 1, 0, "Reina");
+Reina* ptrReinaN = new Reina(0, 1, 4, "Reina");
+
 Rey* ptrReyB = new Rey(1, 2, 0, "Rey");
 Rey* ptrReyN = new Rey(0, 2, 4, "Rey");
 
-
 void Tablero::inicializarTablero() { 
 
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 5; j++) {
-            if (j == 2) {
-                posicionesOcupadasPorBlanca[i][j] = false;
-                posicionesOcupadasPorNegra[i][j] = false;
+    bool posicionesOcupadasPorBlanca[5][4] = {
+         {true, true, true, true},  // Todos true en fila 0
+         {true, true, true, true},  // Todos true en fila 1
+         {false, false, false, false},  // Todos false en fila 2
+         {false, false, false, false},  // Todos false en fila 3
+         {false, false, false, false}   // Todos false en fila 4
+    };
+
+    // Declaración e inicialización de posicionesOcupadasPorNegra
+    bool posicionesOcupadasPorNegra[5][4] = {
+        {false, false, false, false},  // Todos false en fila 0
+        {false, false, false, false},  // Todos false en fila 1
+        {false, false, false, false},  // Todos false en fila 2
+        {true, true, true, true},  // Todos true en fila 3
+        {true, true, true, true} };  // Todos true en fila 4
+
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (posicionesOcupadasPorBlanca[i][j] && posicionesOcupadasPorNegra[i][j]) {
+                std::cout << "-1 ";  // Ocupada por ambas
             }
-            if (j == 0 || j == 1) {
-                posicionesOcupadasPorBlanca[i][j] = true;
-                posicionesOcupadasPorNegra[i][j] = false;
+            else if (posicionesOcupadasPorBlanca[i][j]) {
+                std::cout << "1 ";   // Ocupada solo por blanca
             }
-            if (j == 3 || j == 4) {
-                posicionesOcupadasPorBlanca[i][j] = false;
-                posicionesOcupadasPorNegra[i][j] = true;
+            else if (posicionesOcupadasPorNegra[i][j]) {
+                std::cout << "0 ";   // Ocupada solo por negra
+            }
+            else {
+                std::cout << "- ";   // No ocupada
             }
         }
-    }
-    for (int i = 0; i < 4; i++) {  //FUNCIONA MAL
-        for (int j = 0; j < 5; j++) {
-            if (posicionesOcupadasPorBlanca[i][j]==true) {
-                cout << " 1 ";
-                goto exit;
-            }
-            if (posicionesOcupadasPorNegra[i][j] == true) {
-                cout << " 0 ";
-                goto exit;
-            }
-            if (posicionesOcupadasPorBlanca[i][j] == false && posicionesOcupadasPorNegra[i][j] == false) {
-                cout << " - ";
-                goto exit;
-            }
-        exit: cout << "";
-        }
-        cout << endl;
+        cout << endl;  // Salto de línea al final de cada fila
     }
 }
 
@@ -268,17 +270,17 @@ bool Tablero::esCaminoLibre(int x1, int y1, int x2, int y2) {
 void Tablero::partida() {
     //PRUEBAS DE MOVIMIENTO
     cout << "La posicion del peon numero " << ptrPeonB2->getNumPeon() << " de color: " << ptrPeonB2->getColor() << " es : " << " ("
-        << ptrPeonB2->getPosx() << ", " << ptrPeonB2->getPosy() << ")" << endl;
+    << ptrPeonB2->getPosx() << ", " << ptrPeonB2->getPosy() << ")" << endl;
 
     cout << endl;
     ptrPeonB2->mover_arriba(1, 1, 1);
     cout << "La nueva posicion del peon numero " << ptrPeonB2->getNumPeon() << " de color: " << ptrPeonB2->getColor() << " es : " << " ("
-        << ptrPeonB2->getPosx() << ", " << ptrPeonB2->getPosy() << ")" << endl;
+    << ptrPeonB2->getPosx() << ", " << ptrPeonB2->getPosy() << ")" << endl;
     cout << endl;
 
     ptrPeonN1->mover_abajo(1, 1, 1);
     cout << "La nueva posicion del peon numero " << ptrPeonN1->getNumPeon() << " de color: " << ptrPeonN1->getColor() << " es : " << " ("
-        << ptrPeonN1->getPosx() << ", " << ptrPeonN1->getPosy() << ")" << endl;
+    << ptrPeonN1->getPosx() << ", " << ptrPeonN1->getPosy() << ")" << endl;
     cout << endl;
 
     ptrPeonB3->mover_arriba(1, 1, 1);
@@ -304,8 +306,16 @@ void Tablero::partida() {
     ptrReyB->mover_arriba(1, 1);
     cout << "La nueva posicion del rey de color: " << ptrReyB->getColor() << " es : " << " ("
         << ptrReyB->getPosx() << ", " << ptrReyB->getPosy() << ")" << endl;
+    
+    ptrTorreN2->mover_abajo(4,0, 1);
+    cout << "La nueva posicion de la torre de color: " << ptrTorreN2->getColor() << " es : " << " ("
+        << ptrTorreN2->getPosx() << ", " << ptrTorreN2->getPosy() << ")" << endl;
+
+    ptrReinaB->mover_dch(2,1);
+    cout << "La nueva posicion de la reina de color: " << ptrReinaB->getColor() << " es : " << " ("
+        << ptrReinaB->getPosx() << ", " << ptrReinaB->getPosy() << ")" << endl;
 }
 
 void Tablero::dibujar_Tablero() {
-
+    // ¿Aquí se gestionarían las imágenes?
 }
