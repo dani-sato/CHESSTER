@@ -98,6 +98,18 @@ bool Tablero::isKingInCheck(string color) { //Evalua el jaque al rey del color q
     return false;
 }
 
+vector<pair<int, int>> Tablero::posicionesPosibles(int from_x, int from_y) {
+    vector<pair<int, int>> posiciones;
+    for (int x = 0; x < filas; x++) {
+        for (int y = 0; y < columnas; y++) {
+            if (movimientoPosible(from_x, from_y, x, y)) {
+                posiciones.push_back({ x, y });
+            }
+        }
+    }
+    return posiciones;
+}
+
 bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
     if (from_x == to_x && from_y == to_y) {
         return false;  // No es válido moverse a la misma casilla.
@@ -140,10 +152,13 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
         }
     
         if (abs(to_x - from_x) > 1) {
-            return false;
-        }
-        if (abs(to_x - from_x) == 2) {
-            if (contador > 1) {
+            cout << "Entra en el primer if" << endl;
+            cout << "from_x = " << from_x << "filas = " << filas << endl;
+            if (from_x != filas - 2) {
+                cout << "Entra en el segundo if" << endl;
+                return false;
+ }
+            if (abs(to_x - from_x) > 2) {
                 return false;
             }
         }
@@ -167,11 +182,13 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
             return false;
         }
         if (abs(to_x - from_x) > 1) {
-            return false;
-        }
-
-        if (abs(to_x - from_x) == 2) {
-            if (contador > 1) {
+            cout << "Entra en el primer if" << endl;
+            cout << "from_x = " << from_x << "filas = " << filas << endl;
+            if (from_x != 1) {
+                cout << "Entra en el segundo if" << endl;
+                return false;
+            }
+            if (abs(to_x - from_x) > 2) {
                 return false;
             }
         }
