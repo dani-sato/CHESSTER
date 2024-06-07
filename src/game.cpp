@@ -69,6 +69,37 @@ void displayMenu() {
     std::cout << "q. Salir\n";
     std::cout << "==============================\n";
 }
+//Definición modos de juego
+
+void startGame(int mode) {
+    if (mode == 1) {
+        gameboard = new Tablero(FILAS_SILVER, COLUMNAS_SILVER);
+    }
+    else if (mode == 2) {
+        gameboard = new Tablero(FILAS_DEMI, COLUMNAS_DEMI, true); // Pasamos 'true' para el modo Demi
+    }
+
+    boardGL = new TableroGL(gameboard);
+
+// Inicialización de GLUT
+int argc = 1;
+char* argv[1] = { (char*)"Something" };
+glutInit(&argc, argv);
+glutInitWindowSize(800, 600);
+glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+glutCreateWindow("MiJuego");
+
+// Registrar callbacks
+glutDisplayFunc(OnDraw);
+glutKeyboardFunc(OnKeyboardDown);
+glutMouseFunc(OnMouseClick);
+
+    // Configurar iluminación y perspectiva
+    boardGL->init();
+
+    // Entrar en el bucle principal de GLUT
+    glutMainLoop();
+}
 
 void OnDraw(void) {
 	//////////////////////
