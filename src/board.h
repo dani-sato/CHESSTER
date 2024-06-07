@@ -26,9 +26,11 @@ public:
 
     pair<int, int> findKing(string color);
     bool isKingInCheck(string color);
+    bool isCheckmate(string color);
     bool movimientoPosible(int from_x, int from_y, int to_x, int to_y);
     bool movePiece(int from_x, int from_y, int to_x, int to_y);
+    void promocionPeon(int x, int y, bool esModoDemi);
+    vector<pair<int, int>> Tablero::posicionesPosibles(int from_x, int from_y);
 };
 
 #endif
-
