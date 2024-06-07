@@ -297,6 +297,40 @@ bool Tablero::isCheckmate(string color) {
     return true;  // No hay movimientos posibles que saquen al rey del jaque
 }
 
+//PROMOCIÓN DEL PEÓN
+void Tablero::promocionPeon(int x, int y, bool esModoDemi) {
+    char eleccion;
+    if (esModoDemi) {
+        cout << "Promociona tu peón (a: Alfil, c: Caballo, t: Torre): ";
+        cin >> eleccion;
+        switch (eleccion) {
+        case 'a':
+            tab[x][y].setCasilla(x, y, tab[x][y].getColor() == "BLANCO" ? Pieza::ALFIL_BLANCO : Pieza::ALFIL_NEGRO);
+            break;
+        case 'c':
+            tab[x][y].setCasilla(x, y, tab[x][y].getColor() == "BLANCO" ? Pieza::CABALLO_BLANCO : Pieza::CABALLO_NEGRO);
+            break;
+        case 't':
+        default:
+            tab[x][y].setCasilla(x, y, tab[x][y].getColor() == "BLANCO" ? Pieza::TORRE_BLANCA : Pieza::TORRE_NEGRA);
+            break;
+        }
+    }
+    else{
+        cout << "Promociona tu peón (r: Reina, t: Torre): ";
+        cin >> eleccion;
+        switch (eleccion) {
+        case 'r':
+            tab[x][y].setCasilla(x, y, tab[x][y].getColor() == "BLANCO" ? Pieza::PIEZA_BLANCA : Pieza::PIEZA_NEGRA);
+            break;
+        case 't':
+        default:
+            tab[x][y].setCasilla(x, y, tab[x][y].getColor() == "BLANCO" ? Pieza::TORRE_BLANCA : Pieza::TORRE_NEGRA);
+            break;
+        }
+    }
+}
+
 bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
 
     if (from_x == to_x && from_y == to_y) {
