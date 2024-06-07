@@ -5,6 +5,65 @@
 
 using namespace std;
 
+Tablero::Tablero(int filas, int columnas, bool modoDemi) : filas(filas), columnas(columnas) {
+    tab = new Pieza * [filas];
+    for (int i = 0; i < filas; i++) {
+        tab[i] = new Pieza[columnas];
+    }
+
+    primer_movimiento = true;
+    contador = 0;
+
+    if (modoDemi) {
+        // Configurar posiciÃ³n inicial de las piezas para el modo Demi
+        tab[0][0].setCasilla(0, 0, Pieza::REY_NEGRO);
+        tab[0][1].setCasilla(0, 1, Pieza::ALFIL_NEGRO);
+        tab[0][2].setCasilla(0, 2, Pieza::CABALLO_NEGRO);
+        tab[0][3].setCasilla(0, 3, Pieza::TORRE_NEGRA);
+        tab[1][0].setCasilla(1, 0, Pieza::PEON_NEGRO);
+        tab[1][1].setCasilla(1, 1, Pieza::PEON_NEGRO);
+        tab[1][2].setCasilla(1, 2, Pieza::PEON_NEGRO);
+        tab[1][3].setCasilla(1, 3, Pieza::PEON_NEGRO);
+
+        tab[filas - 1][0].setCasilla(filas - 1, 0, Pieza::REY_BLANCO);
+        tab[filas - 1][1].setCasilla(filas - 1, 1, Pieza::ALFIL_BLANCO);
+        tab[filas - 1][2].setCasilla(filas - 1, 2, Pieza::CABALLO_BLANCO);
+        tab[filas - 1][3].setCasilla(filas - 1, 3, Pieza::TORRE_BLANCA);
+        tab[filas - 2][0].setCasilla(filas - 2, 0, Pieza::PEON_BLANCO);
+        tab[filas - 2][1].setCasilla(filas - 2, 1, Pieza::PEON_BLANCO);
+        tab[filas - 2][2].setCasilla(filas - 2, 2, Pieza::PEON_BLANCO);
+        tab[filas - 2][3].setCasilla(filas - 2, 3, Pieza::PEON_BLANCO);
+    }
+    else {
+        // Configurar posiciÃ³n inicial de las piezas para el modo Silver
+        tab[0][0].setCasilla(0, 0, Pieza::TORRE_NEGRA);
+        tab[0][1].setCasilla(0, 1, Pieza::PIEZA_NEGRA);
+        tab[0][2].setCasilla(0, 2, Pieza::REY_NEGRO);
+        tab[0][3].setCasilla(0, 3, Pieza::TORRE_NEGRA);
+        tab[1][0].setCasilla(1, 0, Pieza::PEON_NEGRO);
+        tab[1][1].setCasilla(1, 1, Pieza::PEON_NEGRO);
+        tab[1][2].setCasilla(1, 2, Pieza::PEON_NEGRO);
+        tab[1][3].setCasilla(1, 3, Pieza::PEON_NEGRO);
+
+        tab[filas - 1][0].setCasilla(filas - 1, 0, Pieza::TORRE_BLANCA);
+        tab[filas - 1][1].setCasilla(filas - 1, 1, Pieza::PIEZA_BLANCA);
+        tab[filas - 1][2].setCasilla(filas - 1, 2, Pieza::REY_BLANCO);
+        tab[filas - 1][3].setCasilla(filas - 1, 3, Pieza::TORRE_BLANCA);
+        tab[filas - 2][0].setCasilla(filas - 2, 0, Pieza::PEON_BLANCO);
+        tab[filas - 2][1].setCasilla(filas - 2, 1, Pieza::PEON_BLANCO);
+        tab[filas - 2][2].setCasilla(filas - 2, 2, Pieza::PEON_BLANCO);
+        tab[filas - 2][3].setCasilla(filas - 2, 3, Pieza::PEON_BLANCO);
+    }
+}
+
+Tablero::~Tablero() {
+    for (int i = 0; i < filas; i++)
+        delete[] tab[i];
+    delete[] tab;
+}
+
+// Resto de las funciones de Tablero...
+
 pair<int, int> Tablero::findKing(string color) {
     for (int i = 0; i < filas; i++) {
         for (int j = 0; j < columnas; j++) {
@@ -14,11 +73,11 @@ pair<int, int> Tablero::findKing(string color) {
             }
         }
     }
-    return { -1, -1 };  // No se encontró el rey
+    return { -1, -1 };  // No se encontrÃ³ el rey
 }
 
 bool Tablero::isKingInCheck(string color) { //Evalua el jaque al rey del color que se ponga aqui
-    pair<int, int> kingPosition = findKing(color);  // Encuentra la posición del rey
+    pair<int, int> kingPosition = findKing(color);  // Encuentra la posiciÃ³n del rey
     if (kingPosition.first == -1) {  // Si no se encuentra el rey, no puede estar en jaque
         return false;
     }
@@ -29,9 +88,9 @@ bool Tablero::isKingInCheck(string color) { //Evalua el jaque al rey del color q
         for (int j = 0; j < columnas; j++) {
             Pieza& attackingPiece = tab[i][j];
             if (attackingPiece.getColor() == enemyColor) {
-                // Simula el movimiento de cada pieza enemiga hacia la posición del rey
+                // Simula el movimiento de cada pieza enemiga hacia la posiciÃ³n del rey
                 if (movimientoPosible(i, j, kingPosition.first, kingPosition.second)) {
-                    return true;  // Si alguna pieza enemiga puede moverse a la posición del rey, él está en jaque
+                    return true;  // Si alguna pieza enemiga puede moverse a la posiciÃ³n del rey, Ã©l estÃ¡ en jaque
                 }
             }
         }
@@ -41,7 +100,7 @@ bool Tablero::isKingInCheck(string color) { //Evalua el jaque al rey del color q
 
 bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
     if (from_x == to_x && from_y == to_y) {
-        return false;  // No es válido moverse a la misma casilla.
+        return false;  // No es vÃ¡lido moverse a la misma casilla.
     }
 
     Pieza& piezaOrigen = tab[from_x][from_y];
@@ -49,7 +108,7 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
     Pieza piezaOriginalDestino = piezaDestino;
     Pieza piezaOriginalOrigen = piezaOrigen;
 
-    // Determinar si la pieza se mueve en línea recta o una casilla en cualquier dirección para el rey
+    // Determinar si la pieza se mueve en lÃ­nea recta o una casilla en cualquier direcciÃ³n para el rey
     bool movimientoLineaRecta = (from_x == to_x) || (from_y == to_y);
     bool movimientoDiagonal = abs(to_x - from_x) == abs(to_y - from_y);
 
@@ -84,11 +143,11 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
         }
         else if (dy == 0 && dx == -1) {  // Movimiento vertical hacia adelante
             if (piezaDestino.getTipo() != Pieza::CASILLA_VACIA) {
-                return false;  // No puede avanzar a una casilla no vacía
+                return false;  // No puede avanzar a una casilla no vacÃ­a
             }
         }
         else {
-            return false;  // Otros movimientos son inválidos
+            return false;  // Otros movimientos son invÃ¡lidos
         }
     }
     else if (esPeonNegro) {
@@ -103,35 +162,35 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
         }
         else if (dy == 0 && dx == 1) {  // Movimiento vertical hacia adelante
             if (piezaDestino.getTipo() != Pieza::CASILLA_VACIA) {
-                return false;  // No puede avanzar a una casilla no vacía
+                return false;  // No puede avanzar a una casilla no vacÃ­a
             }
         }
         else {
-            return false;  // Otros movimientos son inválidos
+            return false;  // Otros movimientos son invÃ¡lidos
         }
     }
 
     if (esTorre) {
         //        cout << "Entra en esTorre" << endl;
         if (movimientoLineaRecta == false) {
-            return false;        // Las torres sólo pueden moverse en línea recta.
+            return false;        // Las torres sÃ³lo pueden moverse en lÃ­nea recta.
         }
     }
 
     if (esRey) {
         if (abs(to_x - from_x) > 1 || abs(to_y - from_y) > 1) {
-            return false;  // El rey solo puede moverse una casilla en cualquier dirección.
+            return false;  // El rey solo puede moverse una casilla en cualquier direcciÃ³n.
         }
     }
 
     if (esReina) {
-        // Movimiento diagonal para piezas genéricas no reyes
+        // Movimiento diagonal para piezas genÃ©ricas no reyes
         if (!movimientoLineaRecta && abs(to_x - from_x) != abs(to_y - from_y)) {
             return false;
         }
     }
 
-    // Verifica si el camino está libre, excepto para el rey que mueve solo una casilla
+    // Verifica si el camino estÃ¡ libre, excepto para el rey que mueve solo una casilla
     if (!esRey || (esRey && (abs(to_x - from_x) > 1 || abs(to_y - from_y) > 1))) {
         while (x != to_x || y != to_y) {
             if (tab[x][y].getTipo() != Pieza::CASILLA_VACIA) {
@@ -157,7 +216,7 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
 
     if (from_x == to_x && from_y == to_y) {
         cout << "Una pieza no puede moverse a su misma casilla" << endl;
-        return false;  // No es válido moverse a la misma casilla.
+        return false;  // No es vÃ¡lido moverse a la misma casilla.
     }
 
     Pieza& piezaOrigen = tab[from_x][from_y];
@@ -166,7 +225,7 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
     Pieza piezaOriginalOrigen = piezaOrigen;
 
 
-    // Determinar si la pieza se mueve en línea recta o una casilla en cualquier dirección para el rey
+    // Determinar si la pieza se mueve en lÃ­nea recta o una casilla en cualquier direcciÃ³n para el rey
     bool movimientoLineaRecta = (from_x == to_x) || (from_y == to_y);
     bool movimientoDiagonal = abs(to_x - from_x) == abs(to_y - from_y);
 
@@ -203,11 +262,11 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         }
         else if (dy == 0 && dx == -1) {  // Movimiento vertical hacia adelante
             if (piezaDestino.getTipo() != Pieza::CASILLA_VACIA) {
-                return false;  // No puede avanzar a una casilla no vacía
+                return false;  // No puede avanzar a una casilla no vacÃ­a
             }
         }
         else {
-            return false;  // Otros movimientos son inválidos
+            return false;  // Otros movimientos son invÃ¡lidos
         }
     }
     else if (esPeonNegro) {
@@ -222,11 +281,11 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         }
         else if (dy == 0 && dx == 1) {  // Movimiento vertical hacia adelante
             if (piezaDestino.getTipo() != Pieza::CASILLA_VACIA) {
-                return false;  // No puede avanzar a una casilla no vacía
+                return false;  // No puede avanzar a una casilla no vacÃ­a
             }
         }
         else {
-            return false;  // Otros movimientos son inválidos
+            return false;  // Otros movimientos son invÃ¡lidos
         }
     }
 
@@ -234,7 +293,7 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         //        cout << "Entra en esTorre" << endl;
         if (movimientoLineaRecta == false) {
             cout << "Las torres solo pueden moverse en lineas rectas" << endl;
-            return false;        // Las torres sólo pueden moverse en línea recta.
+            return false;        // Las torres sÃ³lo pueden moverse en lÃ­nea recta.
         }
     }
 
@@ -242,7 +301,7 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         //        cout << "Entra en esRey" << endl;
         if (abs(to_x - from_x) > 1 || abs(to_y - from_y) > 1) {
             cout << "Los reyes solo peden moverse una casilla" << endl;
-            return false;  // El rey solo puede moverse una casilla en cualquier dirección.
+            return false;  // El rey solo puede moverse una casilla en cualquier direcciÃ³n.
         }
     }
 
@@ -251,14 +310,14 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
     if (esReina) {
         //        cout << "Entra en esReina" << endl;
 
-                // Movimiento diagonal para piezas genéricas no reyes
+                // Movimiento diagonal para piezas genÃ©ricas no reyes
         if (!movimientoLineaRecta && abs(to_x - from_x) != abs(to_y - from_y)) {
             cout << "Las reinas solo se pueden mover en linea recta o diagonal" << endl;
             return false;
         }
     }
 
-    // Verifica si el camino está libre, excepto para el rey que mueve solo una casilla
+    // Verifica si el camino estÃ¡ libre, excepto para el rey que mueve solo una casilla
     if (!esRey || (esRey && (abs(to_x - from_x) > 1 || abs(to_y - from_y) > 1))) {
         while (x != to_x || y != to_y) {
             //          cout << "x= " << x << ", y= " << y << endl;
@@ -292,7 +351,7 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
 
         if (isKingInCheck(tab[to_x][to_y].getColor())) {
             cout << "No puedes hacer ese movimiento: Pondrias al rey " << tab[to_x][to_y].getColor() << " en Jaque" << endl;
-            tab[to_x][to_y] = piezaOriginalDestino;  // Restaura la pieza original en la posición destino
+            tab[to_x][to_y] = piezaOriginalDestino;  // Restaura la pieza original en la posiciÃ³n destino
             tab[from_x][from_y] = piezaOriginalOrigen;
             cout << "Movimiento deshecho" << endl;
             return false;
@@ -304,6 +363,6 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         }
     }
 
-    cout << "Captura inválida de una pieza del mismo equipo" << endl;
-    return false;  // Captura inválida de una pieza del mismo equipo
+    cout << "Captura invÃ¡lida de una pieza del mismo equipo" << endl;
+    return false;  // Captura invÃ¡lida de una pieza del mismo equipo
 }
