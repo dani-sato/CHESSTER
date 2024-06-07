@@ -11,7 +11,7 @@ using namespace std;
 
 class Object {
 public:
-    enum tipo_t { PIEZA_BLANCA, PIEZA_NEGRA, TORRE_BLANCA, TORRE_NEGRA, REY_BLANCO, REY_NEGRO, PEON_BLANCO, PEON_NEGRO, CASILLA_VACIA };
+    enum tipo_t { PIEZA_BLANCA, PIEZA_NEGRA, TORRE_BLANCA, TORRE_NEGRA, REY_BLANCO, REY_NEGRO, ALFIL_BLANCO, ALFIL_NEGRO, CABALLO_BLANCO, CABALLO_NEGRO, PEON_BLANCO, PEON_NEGRO, CASILLA_VACIA };
     virtual void getNumeroCasilla(int& x, int& y) = 0;
     virtual tipo_t getTipo() = 0;
     virtual string getColor() = 0;
@@ -24,7 +24,7 @@ protected:
     tipo_t tipo;
     string color;
 public:
-//    ETSIDI::Sprite torreBlanca{ "C:/Users/Daniel Sato/source/repos/glut_boardgame/imagenes/torreblanca.png",0,0,20,20 }; //Deberia ir en private
+    //    ETSIDI::Sprite torreBlanca{ "C:/Users/Daniel Sato/source/repos/glut_boardgame/imagenes/torreblanca.png",0,0,20,20 }; //Deberia ir en private
     Pieza() : x(-1), y(-1), tipo(CASILLA_VACIA) {}
     void setCasilla(int x, int y, tipo_t t) {
         this->x = x;
