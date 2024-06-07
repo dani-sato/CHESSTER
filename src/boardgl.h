@@ -34,8 +34,8 @@ public:
 
 	
 	//Event managers
-	void Draw();
-	void DrawGrid();
+	void dibuja();
+	void DrawGridSilver();
 	void DrawCell(int i, int j);
 	void KeyDown(unsigned char key);
 	void SpecialKeyDown(unsigned char key);
