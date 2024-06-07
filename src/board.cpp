@@ -122,6 +122,9 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
     bool esPeonBlanco = (piezaOrigen.getTipo() == Pieza::PEON_BLANCO);
     bool esPeon = ((piezaOrigen.getTipo() == Pieza::PEON_BLANCO) || (piezaOrigen.getTipo() == Pieza::PEON_NEGRO));
     bool esNegra = (piezaOrigen.getColor() == "NEGRO");
+    bool esCaballo = ((piezaOrigen.getTipo() == Pieza::CABALLO_BLANCO) || (piezaOrigen.getTipo() == Pieza::CABALLO_NEGRO));
+    bool esAlfil = ((piezaOrigen.getTipo() == Pieza::ALFIL_BLANCO) || (piezaOrigen.getTipo() == Pieza::ALFIL_NEGRO));
+
 
     // Calcular el paso de incremento para verificar el camino bloqueado
     int dx = (to_x - from_x == 0) ? 0 : (to_x - from_x > 0 ? 1 : -1);
@@ -134,6 +137,15 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
         //      cout << "Entra en esPeonBlanco" << endl;
         if (from_x <= to_x) {  // Los peones blancos solo pueden moverse hacia abajo en la matriz (incrementando x)
             return false;
+        }
+    
+        if (abs(to_x - from_x) > 1) {
+            return false;
+        }
+        if (abs(to_x - from_x) == 2) {
+            if (contador > 1) {
+                return false;
+            }
         }
 
         if (movimientoDiagonal) {  // Movimiento diagonal para capturar
@@ -153,6 +165,15 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
     else if (esPeonNegro) {
         if (from_x >= to_x) {  // Los peones negros solo pueden moverse hacia arriba en la matriz (decrementando x)
             return false;
+        }
+        if (abs(to_x - from_x) > 1) {
+            return false;
+        }
+
+        if (abs(to_x - from_x) == 2) {
+            if (contador > 1) {
+                return false;
+            }
         }
 
         if (movimientoDiagonal) {  // Movimiento diagonal para capturar
@@ -187,6 +208,19 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
         // Movimiento diagonal para piezas genéricas no reyes
         if (!movimientoLineaRecta && abs(to_x - from_x) != abs(to_y - from_y)) {
             return false;
+        }
+    }
+    if (esCaballo) {
+        // Movimiento del caballo
+        if (!((abs(to_x - from_x) == 2 && abs(to_y - from_y) == 1) || (abs(to_x - from_x) == 1 && abs(to_y - from_y) == 2))) {
+            return false;
+        }
+    }
+
+    if (esAlfil) {
+        // Movimiento del alfil
+        if (!movimientoDiagonal) {
+            return false;  // El alfil solo puede moverse en diagonal.
         }
     }
 
@@ -239,7 +273,8 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
     bool esPeonBlanco = (piezaOrigen.getTipo() == Pieza::PEON_BLANCO);
     bool esPeon = ((piezaOrigen.getTipo() == Pieza::PEON_BLANCO) || (piezaOrigen.getTipo() == Pieza::PEON_NEGRO));
     bool esNegra = (piezaOrigen.getColor() == "NEGRO");
-
+    bool esCaballo= ((piezaOrigen.getTipo() == Pieza::CABALLO_BLANCO) || (piezaOrigen.getTipo() == Pieza::CABALLO_NEGRO));
+    bool esAlfil = ((piezaOrigen.getTipo() == Pieza::ALFIL_BLANCO) || (piezaOrigen.getTipo() == Pieza::ALFIL_NEGRO));
 
     // Calcular el paso de incremento para verificar el camino bloqueado
     int dx = (to_x - from_x == 0) ? 0 : (to_x - from_x > 0 ? 1 : -1);
@@ -253,6 +288,15 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         //      cout << "Entra en esPeonBlanco" << endl;
         if (from_x <= to_x) {  // Los peones blancos solo pueden moverse hacia abajo en la matriz (incrementando x)
             return false;
+        }
+        
+        if (abs(to_x - from_x) > 1) {
+            if (contador > 1 && abs(to_x - from_x) == 2) {
+                return false;
+            }
+            else if (contador < 2 && abs(to_x - from_x) > 2) {
+                return false;
+            }
         }
 
         if (movimientoDiagonal) {  // Movimiento diagonal para capturar
@@ -272,6 +316,18 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
     else if (esPeonNegro) {
         if (from_x >= to_x) {  // Los peones negros solo pueden moverse hacia arriba en la matriz (decrementando x)
             return false;
+        }
+        if (abs(to_x - from_x) > 1) {
+            return false;
+        }
+
+        if (abs(to_x - from_x) > 1) {
+            if (contador > 1 && abs(to_x - from_x) == 2) {
+                return false;
+            }
+            else if (contador < 2 && abs(to_x - from_x) > 2) {
+                return false;
+            }
         }
 
         if (movimientoDiagonal) {  // Movimiento diagonal para capturar
@@ -314,6 +370,20 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         if (!movimientoLineaRecta && abs(to_x - from_x) != abs(to_y - from_y)) {
             cout << "Las reinas solo se pueden mover en linea recta o diagonal" << endl;
             return false;
+        }
+    }
+
+    if (esCaballo) {
+        // Movimiento del caballo
+        if (!((abs(to_x - from_x) == 2 && abs(to_y - from_y) == 1) || (abs(to_x - from_x) == 1 && abs(to_y - from_y) == 2))) {
+            return false;
+        }
+    }
+
+    if (esAlfil) {
+        // Movimiento del alfil
+        if (!movimientoDiagonal) {
+            return false;  // El alfil solo puede moverse en diagonal.
         }
     }
 
