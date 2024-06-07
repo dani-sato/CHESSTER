@@ -30,14 +30,14 @@ public:
         this->x = x;
         this->y = y;
         this->tipo = t;
-        if (t == TORRE_BLANCA || t == REY_BLANCO || t == PIEZA_BLANCA || t == PEON_BLANCO) {
+        if (t == TORRE_BLANCA || t == REY_BLANCO || t == PIEZA_BLANCA || t == PEON_BLANCO || t == CABALLO_BLANCO || t == ALFIL_BLANCO) {
             this->color = "BLANCO";
         }
-        else if (t == TORRE_NEGRA || t == REY_NEGRO || t == PIEZA_NEGRA || t == PEON_NEGRO) {
+        else if (t == TORRE_NEGRA || t == REY_NEGRO || t == PIEZA_NEGRA || t == PEON_NEGRO || t == CABALLO_NEGRO || t == ALFIL_NEGRO) {
             this->color = "NEGRO";
         }
         else {
-            this->color = "VACIO";  // Para las casillas vacías o cualquier otra situación
+            this->color = "VACIO";  // Para las casillas vacÃ­as o cualquier otra situaciÃ³n
         }
     }
     virtual void getNumeroCasilla(int& x, int& y) { x = this->x; y = this->y; }
