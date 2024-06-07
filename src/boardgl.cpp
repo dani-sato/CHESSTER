@@ -34,13 +34,443 @@ void TableroGL::init() {
 	glLightfv(GL_LIGHT0, GL_POSITION, light_position);
 
 	glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
-	glEnable(GL_NORMALIZE); // Normaliza las normales para que la iluminaci�n sea consistente
+	glEnable(GL_NORMALIZE); // Normaliza las normales para que la iluminación sea consistente
 	glMatrixMode(GL_PROJECTION);
 	gluPerspective(40.0, 800 / 600.0f, 0.1, 150);
 }
 
+void DrawCaballo2D() {
+	glDisable(GL_LIGHTING); // Desactivar iluminación para dibujos 2D
+
+	// Base del caballo
+	glBegin(GL_QUADS);
+	glVertex3f(-0.03f, -0.07f, 0.01f);
+	glVertex3f(0.03f, -0.07f, 0.01f);
+	glVertex3f(0.03f, -0.065f, 0.01f);
+	glVertex3f(-0.03f, -0.065f, 0.01f);
+	glEnd();
+
+	// Primera sección de la base
+	glBegin(GL_QUADS);
+	glVertex3f(-0.025f, -0.065f, 0.01f);
+	glVertex3f(0.025f, -0.065f, 0.01f);
+	glVertex3f(0.025f, -0.055f, 0.01f);
+	glVertex3f(-0.025f, -0.055f, 0.01f);
+	glEnd();
+
+	// Segunda sección de la base (estrechamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.02f, -0.055f, 0.01f);
+	glVertex3f(0.02f, -0.055f, 0.01f);
+	glVertex3f(0.02f, -0.045f, 0.01f);
+	glVertex3f(-0.02f, -0.045f, 0.01f);
+	glEnd();
+
+	// Cuerpo del caballo
+	glBegin(GL_POLYGON);
+	glVertex3f(-0.015f, -0.045f, 0.01f);
+	glVertex3f(0.015f, -0.045f, 0.01f);
+	glVertex3f(0.015f, -0.015f, 0.01f);
+	glVertex3f(0.02f, 0.0f, 0.01f);
+	glVertex3f(0.01f, 0.015f, 0.01f);
+	glVertex3f(-0.005f, 0.025f, 0.01f);
+	glVertex3f(-0.015f, 0.015f, 0.01f);
+	glVertex3f(-0.02f, 0.0f, 0.01f);
+	glVertex3f(-0.015f, -0.015f, 0.01f);
+	glEnd();
+
+	// Detalles de la cabeza del caballo
+	glBegin(GL_LINES);
+	// Línea de la mandíbula
+	glVertex3f(-0.015f, 0.015f, 0.01f);
+	glVertex3f(-0.01f, 0.02f, 0.01f);
+
+	// Línea del cuello
+	glVertex3f(-0.01f, 0.02f, 0.01f);
+	glVertex3f(-0.015f, 0.025f, 0.01f);
+
+	// Línea de la melena
+	glVertex3f(-0.015f, 0.025f, 0.01f);
+	glVertex3f(-0.005f, 0.035f, 0.01f);
+
+	// Línea de la frente
+	glVertex3f(-0.005f, 0.035f, 0.01f);
+	glVertex3f(0.005f, 0.035f, 0.01f);
+
+	// Línea del hocico
+	glVertex3f(0.005f, 0.035f, 0.01f);
+	glVertex3f(0.015f, 0.03f, 0.01f);
+
+	// Línea del hocico
+	glVertex3f(0.015f, 0.03f, 0.01f);
+	glVertex3f(0.02f, 0.025f, 0.01f);
+
+	// Línea de la nariz
+	glVertex3f(0.02f, 0.025f, 0.01f);
+	glVertex3f(0.01f, 0.02f, 0.01f);
+
+	// Línea de la mandíbula
+	glVertex3f(0.01f, 0.02f, 0.01f);
+	glVertex3f(-0.015f, 0.015f, 0.01f);
+	glEnd();
+
+	// Ojo del caballo
+	glBegin(GL_QUADS);
+	glVertex3f(0.005f, 0.03f, 0.01f);
+	glVertex3f(0.01f, 0.03f, 0.01f);
+	glVertex3f(0.01f, 0.025f, 0.01f);
+	glVertex3f(0.005f, 0.025f, 0.01f);
+	glEnd();
+
+	glEnable(GL_LIGHTING); // Reactivar iluminación si es necesario
+}
 
 
+void DrawAlfil2D() {
+	glDisable(GL_LIGHTING); // Desactivar iluminación para dibujos 2D
+
+	// Base del alfil
+	glBegin(GL_QUADS);
+	glVertex3f(-0.03f, -0.07f, 0.01f);
+	glVertex3f(0.03f, -0.07f, 0.01f);
+	glVertex3f(0.03f, -0.065f, 0.01f);
+	glVertex3f(-0.03f, -0.065f, 0.01f);
+	glEnd();
+
+	// Primera sección de la base
+	glBegin(GL_QUADS);
+	glVertex3f(-0.025f, -0.065f, 0.01f);
+	glVertex3f(0.025f, -0.065f, 0.01f);
+	glVertex3f(0.025f, -0.055f, 0.01f);
+	glVertex3f(-0.025f, -0.055f, 0.01f);
+	glEnd();
+
+	// Segunda sección de la base (estrechamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.02f, -0.055f, 0.01f);
+	glVertex3f(0.02f, -0.055f, 0.01f);
+	glVertex3f(0.02f, -0.045f, 0.01f);
+	glVertex3f(-0.02f, -0.045f, 0.01f);
+	glEnd();
+
+	// Tercera sección (ensanchamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.025f, -0.045f, 0.01f);
+	glVertex3f(0.025f, -0.045f, 0.01f);
+	glVertex3f(0.025f, -0.035f, 0.01f);
+	glVertex3f(-0.025f, -0.035f, 0.01f);
+	glEnd();
+
+	// Cuerpo del alfil
+	glBegin(GL_QUADS);
+	glVertex3f(-0.015f, -0.035f, 0.01f);
+	glVertex3f(0.015f, -0.035f, 0.01f);
+	glVertex3f(0.015f, 0.015f, 0.01f);
+	glVertex3f(-0.015f, 0.015f, 0.01f);
+	glEnd();
+
+	// Cuello del alfil (estrechamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.02f, 0.015f, 0.01f);
+	glVertex3f(0.02f, 0.015f, 0.01f);
+	glVertex3f(0.02f, 0.03f, 0.01f);
+	glVertex3f(-0.02f, 0.03f, 0.01f);
+	glEnd();
+
+	// Cabeza del alfil (redonda)
+	float radius = 0.012f;
+	int num_segments = 100; // Número de segmentos para aproximar el círculo
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(0.0f, 0.03f + radius, 0.01f); // Centro del círculo
+	for (int i = 0; i <= num_segments; i++) {
+		float angle = 2.0f * M_PI * float(i) / float(num_segments);
+		float dx = radius * cosf(angle);
+		float dy = radius * sinf(angle);
+		glVertex3f(dx, 0.03f + dy, 0.01f);
+	}
+	glEnd();
+
+	// Corte de la cabeza del alfil
+	glBegin(GL_QUADS);
+	glVertex3f(-0.01f, 0.03f, 0.01f);
+	glVertex3f(0.01f, 0.03f, 0.01f);
+	glVertex3f(0.01f, 0.04f, 0.01f);
+	glVertex3f(-0.01f, 0.04f, 0.01f);
+	glEnd();
+
+	glEnable(GL_LIGHTING); // Reactivar iluminación si es necesario
+}
+
+
+void DrawTorre2D() {
+	glDisable(GL_LIGHTING); // Desactivar iluminación para dibujos 2D
+
+	// Base de la torre
+	glBegin(GL_QUADS);
+	glVertex3f(-0.0225f, -0.0675f, 0.01f);
+	glVertex3f(0.0225f, -0.0675f, 0.01f);
+	glVertex3f(0.0225f, -0.0525f, 0.01f);
+	glVertex3f(-0.0225f, -0.0525f, 0.01f);
+	glEnd();
+
+	// Cuerpo de la torre
+	glBegin(GL_QUADS);
+	glVertex3f(-0.015f, -0.0525f, 0.01f);
+	glVertex3f(0.015f, -0.0525f, 0.01f);
+	glVertex3f(0.015f, 0.0375f, 0.01f);
+	glVertex3f(-0.015f, 0.0375f, 0.01f);
+	glEnd();
+
+	// Parte superior de la torre
+	glBegin(GL_QUADS);
+	glVertex3f(-0.0225f, 0.0375f, 0.01f);
+	glVertex3f(0.0225f, 0.0375f, 0.01f);
+	glVertex3f(0.0225f, 0.0525f, 0.01f);
+	glVertex3f(-0.0225f, 0.0525f, 0.01f);
+	glEnd();
+
+	// Merlones de la torre
+	glBegin(GL_QUADS);
+	glVertex3f(-0.0225f, 0.0525f, 0.01f);
+	glVertex3f(-0.015f, 0.0525f, 0.01f);
+	glVertex3f(-0.015f, 0.0675f, 0.01f);
+	glVertex3f(-0.0225f, 0.0675f, 0.01f);
+
+	glVertex3f(-0.0075f, 0.0525f, 0.01f);
+	glVertex3f(0.0f, 0.0525f, 0.01f);
+	glVertex3f(0.0f, 0.0675f, 0.01f);
+	glVertex3f(-0.0075f, 0.0675f, 0.01f);
+
+	glVertex3f(0.0075f, 0.0525f, 0.01f);
+	glVertex3f(0.015f, 0.0525f, 0.01f);
+	glVertex3f(0.015f, 0.0675f, 0.01f);
+	glVertex3f(0.0075f, 0.0675f, 0.01f);
+
+	glVertex3f(0.015f, 0.0525f, 0.01f);
+	glVertex3f(0.0225f, 0.0525f, 0.01f);
+	glVertex3f(0.0225f, 0.0675f, 0.01f);
+	glVertex3f(0.015f, 0.0675f, 0.01f);
+	glEnd();
+
+	glEnable(GL_LIGHTING); // Reactivar iluminación si es necesario
+}
+
+void DrawPeon2D() {
+	glDisable(GL_LIGHTING); // Desactivar iluminación para dibujos 2D
+
+	// Base del peón
+	glBegin(GL_QUADS);
+	glVertex3f(-0.0225f, -0.0675f, 0.01f);
+	glVertex3f(0.0225f, -0.0675f, 0.01f);
+	glVertex3f(0.0225f, -0.0525f, 0.01f);
+	glVertex3f(-0.0225f, -0.0525f, 0.01f);
+	glEnd();
+
+	// Cuerpo del peón
+	glBegin(GL_QUADS);
+	glVertex3f(-0.015f, -0.0525f, 0.01f);
+	glVertex3f(0.015f, -0.0525f, 0.01f);
+	glVertex3f(0.015f, 0.0375f, 0.01f);
+	glVertex3f(-0.015f, 0.0375f, 0.01f);
+	glEnd();
+
+	// Cabeza del peón (redonda)
+	float radius = 0.015f;
+	int num_segments = 100; // Número de segmentos para aproximar el círculo
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(0.0f, 0.0525f + radius, 0.01f); // Centro del círculo
+	for (int i = 0; i <= num_segments; i++) {
+		float angle = 2.0f * M_PI * float(i) / float(num_segments);
+		float dx = radius * cosf(angle);
+		float dy = radius * sinf(angle);
+		glVertex3f(dx, 0.0525f + dy, 0.01f);
+	}
+	glEnd();
+
+	glEnable(GL_LIGHTING); // Reactivar iluminación si es necesario
+}
+
+void DrawReina2D() {
+	glDisable(GL_LIGHTING); // Desactivar iluminación para dibujos 2D
+
+	// Base de la reina
+	glBegin(GL_QUADS);
+	glVertex3f(-0.03f, -0.07f, 0.01f);
+	glVertex3f(0.03f, -0.07f, 0.01f);
+	glVertex3f(0.03f, -0.065f, 0.01f);
+	glVertex3f(-0.03f, -0.065f, 0.01f);
+	glEnd();
+
+	// Primera sección
+	glBegin(GL_QUADS);
+	glVertex3f(-0.025f, -0.065f, 0.01f);
+	glVertex3f(0.025f, -0.065f, 0.01f);
+	glVertex3f(0.025f, -0.055f, 0.01f);
+	glVertex3f(-0.025f, -0.055f, 0.01f);
+	glEnd();
+
+	// Segunda sección (estrechamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.02f, -0.055f, 0.01f);
+	glVertex3f(0.02f, -0.055f, 0.01f);
+	glVertex3f(0.02f, -0.03f, 0.01f);
+	glVertex3f(-0.02f, -0.03f, 0.01f);
+	glEnd();
+
+	// Tercera sección (ensanchamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.025f, -0.03f, 0.01f);
+	glVertex3f(0.025f, -0.03f, 0.01f);
+	glVertex3f(0.025f, -0.02f, 0.01f);
+	glVertex3f(-0.025f, -0.02f, 0.01f);
+	glEnd();
+
+	// Cuarta sección (estrechamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.015f, -0.02f, 0.01f);
+	glVertex3f(0.015f, -0.02f, 0.01f);
+	glVertex3f(0.015f, 0.02f, 0.01f);
+	glVertex3f(-0.015f, 0.02f, 0.01f);
+	glEnd();
+
+	// Quinta sección (ensanchamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.02f, 0.02f, 0.01f);
+	glVertex3f(0.02f, 0.02f, 0.01f);
+	glVertex3f(0.02f, 0.03f, 0.01f);
+	glVertex3f(-0.02f, 0.03f, 0.01f);
+	glEnd();
+
+	// Cabeza de la reina (redonda)
+	float radius = 0.012f;
+	int num_segments = 100; // Número de segmentos para aproximar el círculo
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(0.0f, 0.03f + radius, 0.01f); // Centro del círculo
+	for (int i = 0; i <= num_segments; i++) {
+		float angle = 2.0f * M_PI * float(i) / float(num_segments);
+		float dx = radius * cosf(angle);
+		float dy = radius * sinf(angle);
+		glVertex3f(dx, 0.03f + dy, 0.01f);
+	}
+	glEnd();
+
+	// Corona de la reina con cinco puntas
+	glBegin(GL_TRIANGLES);
+	glVertex3f(-0.03f, 0.03f, 0.01f); // Primera punta
+	glVertex3f(-0.02f, 0.07f, 0.01f);
+	glVertex3f(-0.01f, 0.03f, 0.01f);
+
+	glVertex3f(-0.015f, 0.03f, 0.01f); // Segunda punta
+	glVertex3f(-0.0075f, 0.08f, 0.01f);
+	glVertex3f(0.0f, 0.03f, 0.01f);
+
+	glVertex3f(0.0f, 0.03f, 0.01f); // Tercera punta
+	glVertex3f(0.0075f, 0.08f, 0.01f);
+	glVertex3f(0.015f, 0.03f, 0.01f);
+
+	glVertex3f(0.01f, 0.03f, 0.01f); // Cuarta punta
+	glVertex3f(0.02f, 0.07f, 0.01f);
+	glVertex3f(0.03f, 0.03f, 0.01f);
+	glEnd();
+
+	glEnable(GL_LIGHTING); // Reactivar iluminación si es necesario
+}
+
+
+void DrawRey2D() {
+	glDisable(GL_LIGHTING); // Desactivar iluminación para dibujos 2D
+
+	// Base del rey
+	glBegin(GL_QUADS);
+	glVertex3f(-0.03f, -0.07f, 0.01f);
+	glVertex3f(0.03f, -0.07f, 0.01f);
+	glVertex3f(0.03f, -0.065f, 0.01f);
+	glVertex3f(-0.03f, -0.065f, 0.01f);
+	glEnd();
+
+	// Primera sección
+	glBegin(GL_QUADS);
+	glVertex3f(-0.025f, -0.065f, 0.01f);
+	glVertex3f(0.025f, -0.065f, 0.01f);
+	glVertex3f(0.025f, -0.055f, 0.01f);
+	glVertex3f(-0.025f, -0.055f, 0.01f);
+	glEnd();
+
+	// Segunda sección (estrechamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.02f, -0.055f, 0.01f);
+	glVertex3f(0.02f, -0.055f, 0.01f);
+	glVertex3f(0.02f, -0.03f, 0.01f);
+	glVertex3f(-0.02f, -0.03f, 0.01f);
+	glEnd();
+
+	// Tercera sección (ensanchamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.025f, -0.03f, 0.01f);
+	glVertex3f(0.025f, -0.03f, 0.01f);
+	glVertex3f(0.025f, -0.02f, 0.01f);
+	glVertex3f(-0.025f, -0.02f, 0.01f);
+	glEnd();
+
+	// Cuarta sección (estrechamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.015f, -0.02f, 0.01f);
+	glVertex3f(0.015f, -0.02f, 0.01f);
+	glVertex3f(0.015f, 0.02f, 0.01f);
+	glVertex3f(-0.015f, 0.02f, 0.01f);
+	glEnd();
+
+	// Quinta sección (ensanchamiento)
+	glBegin(GL_QUADS);
+	glVertex3f(-0.02f, 0.02f, 0.01f);
+	glVertex3f(0.02f, 0.02f, 0.01f);
+	glVertex3f(0.02f, 0.03f, 0.01f);
+	glVertex3f(-0.02f, 0.03f, 0.01f);
+	glEnd();
+
+	// Cabeza del rey (redonda)
+	float radius = 0.015f;
+	int num_segments = 100; // Número de segmentos para aproximar el círculo
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(0.0f, 0.03f + radius, 0.01f); // Centro del círculo
+	for (int i = 0; i <= num_segments; i++) {
+		float angle = 2.0f * M_PI * float(i) / float(num_segments);
+		float dx = radius * cosf(angle);
+		float dy = radius * sinf(angle);
+		glVertex3f(dx, 0.03f + dy, 0.01f);
+	}
+	glEnd();
+
+	// Corona del rey con tres puntas
+	glBegin(GL_TRIANGLES);
+	glVertex3f(-0.02f, 0.03f, 0.01f); // Primera punta
+	glVertex3f(-0.01f, 0.06f, 0.01f);
+	glVertex3f(-0.005f, 0.03f, 0.01f);
+
+	glVertex3f(-0.005f, 0.03f, 0.01f); // Segunda punta
+	glVertex3f(0.0f, 0.07f, 0.01f);
+	glVertex3f(0.005f, 0.03f, 0.01f);
+
+	glVertex3f(0.005f, 0.03f, 0.01f); // Tercera punta
+	glVertex3f(0.01f, 0.06f, 0.01f);
+	glVertex3f(0.02f, 0.03f, 0.01f);
+	glEnd();
+
+	// Cruz en la parte superior de la corona, más baja
+	glBegin(GL_QUADS);
+	glVertex3f(-0.005f, 0.05f, 0.01f);
+	glVertex3f(0.005f, 0.05f, 0.01f);
+	glVertex3f(0.005f, 0.07f, 0.01f);
+	glVertex3f(-0.005f, 0.07f, 0.01f);
+
+	glVertex3f(-0.01f, 0.06f, 0.01f);
+	glVertex3f(0.01f, 0.06f, 0.01f);
+	glVertex3f(0.01f, 0.07f, 0.01f);
+	glVertex3f(-0.01f, 0.07f, 0.01f);
+	glEnd();
+
+	glEnable(GL_LIGHTING); // Reactivar iluminación si es necesario
+}
 
 
 void TableroGL::DrawGrid() {
@@ -190,7 +620,7 @@ void TableroGL::Draw() {
 	glLoadIdentity();
 	gluLookAt(center_x, center_y, dist, center_x, center_y, center_z, 0, 1, 0);
 
-	// Dibuja el tablero y la cuadr�cula
+	// Dibuja el tablero y la cuadrícula
 	DrawGrid();
 	for (int i = 0; i < filas; i++) {
 		for (int j = 0; j < columnas; j++) {
@@ -198,7 +628,7 @@ void TableroGL::Draw() {
 		}
 	}
 
-	// Dibuja un rect�ngulo transparente sobre el tablero para capturar la entrada del mouse con gluUnProject
+	// Dibuja un rectángulo transparente sobre el tablero para capturar la entrada del mouse con gluUnProject
 	glDisable(GL_LIGHTING);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -265,15 +695,15 @@ void TableroGL::MouseButton(int x, int y, int button, bool down, bool sKey, bool
 
 	if (down && button == MOUSE_LEFT_BUTTON) {
 		if (selectedPiece) {
-			// Intenta mover la pieza seleccionada a la nueva ubicaci�n
+			// Intenta mover la pieza seleccionada a la nueva ubicación
 			bool moveSuccessful = m_tablero->movePiece(selected_x, selected_y, xcell_sel, ycell_sel);
 			if (moveSuccessful) {
-				moveRandomBlackPiece(); // Mueve una pieza negra autom�ticamente si la blanca se movi�
+				moveRandomBlackPiece(); // Mueve una pieza negra automáticamente si la blanca se movió
 			}
-			selectedPiece = false; // Deselecciona la pieza despu�s de moverla
+			selectedPiece = false; // Deselecciona la pieza después de moverla
 		}
 		else {
-			// Selecciona la pieza en la ubicaci�n actual
+			// Selecciona la pieza en la ubicación actual
 			selected_x = xcell_sel;
 			selected_y = ycell_sel;
 			selectedPiece = true;
@@ -311,7 +741,7 @@ void TableroGL::moveRandomBlackPiece() {
 			}
 		}
 	}
-	// Intenta mover una pieza negra aleatoriamente hasta que tenga �xito
+	// Intenta mover una pieza negra aleatoriamente hasta que tenga éxito
 	while (!piezasNegras.empty()) {
 		int randIndex = rand() % piezasNegras.size();
 		int from_x = piezasNegras[randIndex].first;
