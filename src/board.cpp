@@ -224,8 +224,8 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
         }
     }
 
-    // Verifica si el camino está libre, excepto para el rey que mueve solo una casilla
-    if (!esRey || (esRey && (abs(to_x - from_x) > 1 || abs(to_y - from_y) > 1))) {
+    // Verifica si el camino está libre, excepto para el rey y el caballo que mueven solo una casilla
+    if (!esRey && !esCaballo) {
         while (x != to_x || y != to_y) {
             if (tab[x][y].getTipo() != Pieza::CASILLA_VACIA) {
                 return false;  // Camino bloqueado
@@ -244,6 +244,40 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
 
     return true;
 
+}
+
+bool Tablero::isCheckmate(string color) {
+    // Recorre todas las piezas del color dado
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            Pieza& pieza = tab[i][j];
+            if (pieza.getColor() == color) {
+                // Intenta mover la pieza a todas las posiciones posibles
+                for (int x = 0; x < filas; x++) {
+                    for (int y = 0; y < columnas; y++) {
+                        if (movimientoPosible(i, j, x, y)) {
+                            // Simula el movimiento
+                            Pieza piezaDestinoOriginal = tab[x][y];
+                            tab[x][y] = pieza;
+                            tab[i][j] = Pieza();
+
+                            bool reyEnJaque = isKingInCheck(color);
+
+                            // Deshace el movimiento
+                            tab[i][j] = pieza;
+                            tab[x][y] = piezaDestinoOriginal;
+
+                            // Si algún movimiento es posible sin dejar al rey en jaque, no es jaque mate
+                            if (!reyEnJaque) {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return true;  // No hay movimientos posibles que saquen al rey del jaque
 }
 
 bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
@@ -387,12 +421,10 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         }
     }
 
-    // Verifica si el camino está libre, excepto para el rey que mueve solo una casilla
-    if (!esRey || (esRey && (abs(to_x - from_x) > 1 || abs(to_y - from_y) > 1))) {
+    // Verifica si el camino está libre, excepto para el rey y el caballo que mueven solo una casilla
+    if (!esRey && !esCaballo) {
         while (x != to_x || y != to_y) {
-            //          cout << "x= " << x << ", y= " << y << endl;
             if (tab[x][y].getTipo() != Pieza::CASILLA_VACIA) {
-                //              cout << "Camino bloqueado" << endl;
                 return false;  // Camino bloqueado
             }
             x += dx;
@@ -416,6 +448,8 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         // Realiza el movimiento
         tab[to_x][to_y] = piezaOrigen;
         tab[from_x][from_y] = Pieza(); 
+
+        contador++;
         
         cout << "Movimiento realizado por una pieza de color " << tab[to_x][to_y].getColor() << endl;
 
@@ -429,6 +463,7 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
 
         if (!isKingInCheck(tab[from_x][from_y].getColor())) {
             cout << "Movimiento realizado por una pieza de color " << tab[from_x][from_y].getColor() << endl;
+            primer_movimiento = false;
             return true;
         }
     }
