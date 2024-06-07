@@ -473,7 +473,7 @@ void DrawRey2D() {
 }
 
 
-void TableroGL::DrawGrid() {
+void TableroGL::DrawGridSilver() {
 	float dist_filas = filas * width;
 	float dist_columnas = columnas * width;
 	bool isGray = true;  // Comienza con gris
@@ -528,7 +528,8 @@ void TableroGL::DrawCell(int i, int j) {
 		glDisable(GL_LIGHTING);
 		GLTools::Color(gltools::GREY);
 		glTranslatef(glx, gly, 0);
-		glutSolidSphere((width / 2.0f) * 0.9f, 50, 50);
+		DrawReina2D();
+	//	glutSolidSphere((width / 2.0f) * 0.9f, 50, 50);
 		glTranslatef(-glx, -gly, 0);
 		glEnable(GL_LIGHTING);
 		break;
@@ -537,10 +538,11 @@ void TableroGL::DrawCell(int i, int j) {
 		glDisable(GL_LIGHTING);
 		GLTools::Color(gltools::BLACK);
 		glTranslatef(glx, gly, 0);
+		DrawReina2D();
 	//	sprite = new ETSIDI::Sprite("C:/Users/Daniel Sato/source/repos/glut_boardgame4/imagenes/reinablanca.png", -2, -2, 1, 1);
 	//	sprite->draw();
 	//	torrenegra->draw();
-		glutSolidSphere((width / 2.0f) * 0.9f, 50, 50);
+	//	glutSolidSphere((width / 2.0f) * 0.9f, 50, 50);
 		glTranslatef(-glx, -gly, 0);
 		glEnable(GL_LIGHTING);
 		break;
@@ -549,7 +551,8 @@ void TableroGL::DrawCell(int i, int j) {
 		glDisable(GL_LIGHTING);
 		GLTools::Color(gltools::GREY);
 		glTranslatef(glx, gly, 0);
-		glutSolidCube((width / 2.0f) * 0.9f);
+		DrawTorre2D();
+	//	glutSolidCube((width / 2.0f) * 0.9f);
 		glTranslatef(-glx, -gly, 0);
 		glEnable(GL_LIGHTING);
 		break;
@@ -558,7 +561,8 @@ void TableroGL::DrawCell(int i, int j) {
 		glDisable(GL_LIGHTING);
 		GLTools::Color(gltools::BLACK);
 		glTranslatef(glx, gly, 0);
-		glutSolidCube((width / 2.0f) * 0.9f);
+		DrawTorre2D();
+	//	glutSolidCube((width / 2.0f) * 0.9f);
 		glTranslatef(-glx, -gly, 0);
 		glEnable(GL_LIGHTING);
 		break;
@@ -567,7 +571,8 @@ void TableroGL::DrawCell(int i, int j) {
 		glDisable(GL_LIGHTING);
 		GLTools::Color(gltools::GREEN);
 		glTranslatef(glx, gly, 0);
-		glutSolidSphere((width / 2.0f) * 0.9f, 50, 50);
+		DrawRey2D();
+	//	glutSolidSphere((width / 2.0f) * 0.9f, 50, 50);
 		glTranslatef(-glx, -gly, 0);
 		glEnable(GL_LIGHTING);
 		break;
@@ -576,7 +581,48 @@ void TableroGL::DrawCell(int i, int j) {
 		glDisable(GL_LIGHTING);
 		GLTools::Color(gltools::BLUE);
 		glTranslatef(glx, gly, 0);
-		glutSolidSphere((width / 2.0f) * 0.9f, 50, 50);
+		DrawRey2D();
+	//	glutSolidSphere((width / 2.0f) * 0.9f, 50, 50);
+		glTranslatef(-glx, -gly, 0);
+		glEnable(GL_LIGHTING);
+		break;
+	case Object::ALFIL_BLANCO:
+		cell2center(i, j, glx, gly);
+		glDisable(GL_LIGHTING);
+		GLTools::Color(gltools::GREY);
+		glTranslatef(glx, gly, 0);
+		DrawAlfil2D();
+	//	glutSolidSphere((width / 3.0f) * 0.9f, 50, 50);
+		glTranslatef(-glx, -gly, 0);
+		glEnable(GL_LIGHTING);
+		break;
+	case Object::ALFIL_NEGRO:
+		cell2center(i, j, glx, gly);
+		glDisable(GL_LIGHTING);
+		GLTools::Color(gltools::BLACK);
+		glTranslatef(glx, gly, 0);
+		DrawAlfil2D();
+	//	glutSolidSphere((width / 3.0f) * 0.9f, 50, 50);
+		glTranslatef(-glx, -gly, 0);
+		glEnable(GL_LIGHTING);
+		break;
+	case Object::CABALLO_BLANCO:
+		cell2center(i, j, glx, gly);
+		glDisable(GL_LIGHTING);
+		GLTools::Color(gltools::GREY);
+		glTranslatef(glx, gly, 0);
+		DrawCaballo2D();
+	//	glutSolidSphere((width / 3.0f) * 0.9f, 50, 50);
+		glTranslatef(-glx, -gly, 0);
+		glEnable(GL_LIGHTING);
+		break;
+	case Object::CABALLO_NEGRO:
+		cell2center(i, j, glx, gly);
+		glDisable(GL_LIGHTING);
+		GLTools::Color(gltools::BLACK);
+		glTranslatef(glx, gly, 0);
+		DrawCaballo2D();
+	//	glutSolidSphere((width / 3.0f) * 0.9f, 50, 50);
 		glTranslatef(-glx, -gly, 0);
 		glEnable(GL_LIGHTING);
 		break;
@@ -585,7 +631,8 @@ void TableroGL::DrawCell(int i, int j) {
 		glDisable(GL_LIGHTING);
 		GLTools::Color(gltools::GREY);
 		glTranslatef(glx, gly, 0);
-		glutSolidSphere((width / 3.0f) * 0.9f, 50, 50);
+		DrawPeon2D();
+	//	glutSolidSphere((width / 3.0f) * 0.9f, 50, 50);
 		glTranslatef(-glx, -gly, 0);
 		glEnable(GL_LIGHTING);
 		break;
@@ -594,7 +641,8 @@ void TableroGL::DrawCell(int i, int j) {
 		glDisable(GL_LIGHTING);
 		GLTools::Color(gltools::BLACK);
 		glTranslatef(glx, gly, 0);
-		glutSolidSphere((width / 3.0f) * 0.9f, 50, 50);
+		DrawPeon2D();
+	//	glutSolidSphere((width / 3.0f) * 0.9f, 50, 50);
 		glTranslatef(-glx, -gly, 0);
 		glEnable(GL_LIGHTING);
 		break;
@@ -606,7 +654,7 @@ void TableroGL::DrawCell(int i, int j) {
 
 
 
-void TableroGL::Draw() {
+void TableroGL::dibuja() {
 	center_x = columnas * width / 2;
 	center_y = -filas * width / 2;
 	center_z = 0;
@@ -621,7 +669,7 @@ void TableroGL::Draw() {
 	gluLookAt(center_x, center_y, dist, center_x, center_y, center_z, 0, 1, 0);
 
 	// Dibuja el tablero y la cuadrícula
-	DrawGrid();
+	DrawGridSilver();
 	for (int i = 0; i < filas; i++) {
 		for (int j = 0; j < columnas; j++) {
 			DrawCell(i, j);
@@ -748,6 +796,7 @@ void TableroGL::moveRandomBlackPiece() {
 		int from_y = piezasNegras[randIndex].second;
 
 		int attempts = 0;
+		int flag = 0;
 		bool movimientoHecho = false;
 		while (attempts < 8) {
 			int dx = rand() % 3 - 1; // -1, 0, 1
@@ -770,7 +819,12 @@ void TableroGL::moveRandomBlackPiece() {
 		}
 		else {
 			// Elimina la pieza de la lista si no se pudo mover
+			flag++;
 			piezasNegras.erase(piezasNegras.begin() + randIndex);
+			if (flag == piezasNegras.size()) {
+				cout << "El rey negro esta en jaque mate: Victoria Blanca" << endl;
+				exit(0);
+			}
 		}
 	}
 }
