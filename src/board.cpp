@@ -2,8 +2,16 @@
 #include "board.h"
 #include "piece.h"
 #include <iostream>
+#include"ETSIDI.h"
+#include <thread>
+#include <chrono>
+
+
 
 using namespace std;
+using ETSIDI::play;
+
+
 
 Tablero::Tablero(int filas, int columnas, bool modoDemi) : filas(filas), columnas(columnas) {
     tab = new Pieza * [filas];
@@ -76,7 +84,7 @@ pair<int, int> Tablero::findKing(string color) {
     return { -1, -1 };  // No se encontró el rey
 }
 
-bool Tablero::isKingInCheck(string color) { //Evalua el jaque al rey del color que se ponga aqui
+bool Tablero::isKingInCheck(string color) { //Evalua el jaque al rey del color que mueve
     pair<int, int> kingPosition = findKing(color);  // Encuentra la posición del rey
     if (kingPosition.first == -1) {  // Si no se encuentra el rey, no puede estar en jaque
         return false;
@@ -90,6 +98,7 @@ bool Tablero::isKingInCheck(string color) { //Evalua el jaque al rey del color q
             if (attackingPiece.getColor() == enemyColor) {
                 // Simula el movimiento de cada pieza enemiga hacia la posición del rey
                 if (movimientoPosible(i, j, kingPosition.first, kingPosition.second)) {
+                    play("sonidos/jaque.mp3");
                     return true;  // Si alguna pieza enemiga puede moverse a la posición del rey, él está en jaque
                 }
             }
@@ -109,6 +118,7 @@ vector<pair<int, int>> Tablero::posicionesPosibles(int from_x, int from_y) {
     }
     return posiciones;
 }
+
 
 bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
     if (from_x == to_x && from_y == to_y) {
@@ -138,6 +148,7 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
     bool esAlfil = ((piezaOrigen.getTipo() == Pieza::ALFIL_BLANCO) || (piezaOrigen.getTipo() == Pieza::ALFIL_NEGRO));
 
 
+
     // Calcular el paso de incremento para verificar el camino bloqueado
     int dx = (to_x - from_x == 0) ? 0 : (to_x - from_x > 0 ? 1 : -1);
     int dy = (to_y - from_y == 0) ? 0 : (to_y - from_y > 0 ? 1 : -1);
@@ -150,14 +161,14 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
         if (from_x <= to_x) {  // Los peones blancos solo pueden moverse hacia abajo en la matriz (incrementando x)
             return false;
         }
-    
+
         if (abs(to_x - from_x) > 1) {
             cout << "Entra en el primer if" << endl;
             cout << "from_x = " << from_x << "filas = " << filas << endl;
             if (from_x != filas - 2) {
                 cout << "Entra en el segundo if" << endl;
                 return false;
- }
+            }
             if (abs(to_x - from_x) > 2) {
                 return false;
             }
@@ -181,6 +192,7 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
         if (from_x >= to_x) {  // Los peones negros solo pueden moverse hacia arriba en la matriz (decrementando x)
             return false;
         }
+
         if (abs(to_x - from_x) > 1) {
             cout << "Entra en el primer if" << endl;
             cout << "from_x = " << from_x << "filas = " << filas << endl;
@@ -227,6 +239,7 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
             return false;
         }
     }
+
     if (esCaballo) {
         // Movimiento del caballo
         if (!((abs(to_x - from_x) == 2 && abs(to_y - from_y) == 1) || (abs(to_x - from_x) == 1 && abs(to_y - from_y) == 2))) {
@@ -251,6 +264,7 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
             y += dy;
         }
     }
+   
 
     // Verifica la celda de destino para prevenir captura de piezas del mismo equipo (EN NEGRAS)
     if (piezaDestino.getTipo() != Pieza::CASILLA_VACIA) {
@@ -258,9 +272,7 @@ bool Tablero::movimientoPosible(int from_x, int from_y, int to_x, int to_y) {
             return false;  // No puedes capturar tus propias piezas, incluyendo al propio rey
         }
     }
-
     return true;
-
 }
 
 bool Tablero::isCheckmate(string color) {
@@ -294,10 +306,10 @@ bool Tablero::isCheckmate(string color) {
             }
         }
     }
+
     return true;  // No hay movimientos posibles que saquen al rey del jaque
 }
 
-//PROMOCIÓN DEL PEÓN
 void Tablero::promocionPeon(int x, int y, bool esModoDemi) {
     char eleccion;
     if (esModoDemi) {
@@ -333,6 +345,9 @@ void Tablero::promocionPeon(int x, int y, bool esModoDemi) {
 
 bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
 
+    bool esFueraDeTablero = (from_x < 0 || from_x >= filas || from_y < 0 || from_y >= columnas || to_x < 0 || to_x >= filas || to_y < 0 || to_y >= columnas);
+    if (esFueraDeTablero) return false;
+
     if (from_x == to_x && from_y == to_y) {
         cout << "Una pieza no puede moverse a su misma casilla" << endl;
         return false;  // No es válido moverse a la misma casilla.
@@ -343,13 +358,13 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
     Pieza piezaOriginalDestino = piezaDestino;
     Pieza piezaOriginalOrigen = piezaOrigen;
 
+  
+
 
     // Determinar si la pieza se mueve en línea recta o una casilla en cualquier dirección para el rey
     bool movimientoLineaRecta = (from_x == to_x) || (from_y == to_y);
     bool movimientoDiagonal = abs(to_x - from_x) == abs(to_y - from_y);
 
-    bool esFueraDeTablero = (from_x < 0 || from_x >= filas || from_y < 0 || from_y >= columnas || to_x < 0 || to_x >= filas || to_y < 0 || to_y >= columnas);
-    if (esFueraDeTablero) return false;
 
     bool esRey = ((piezaOrigen.getTipo() == Pieza::REY_BLANCO) || (piezaOrigen.getTipo() == Pieza::REY_NEGRO));
     bool esReina = ((piezaOrigen.getTipo() == Pieza::PIEZA_BLANCA) || (piezaOrigen.getTipo() == Pieza::PIEZA_NEGRA));
@@ -360,6 +375,7 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
     bool esNegra = (piezaOrigen.getColor() == "NEGRO");
     bool esCaballo= ((piezaOrigen.getTipo() == Pieza::CABALLO_BLANCO) || (piezaOrigen.getTipo() == Pieza::CABALLO_NEGRO));
     bool esAlfil = ((piezaOrigen.getTipo() == Pieza::ALFIL_BLANCO) || (piezaOrigen.getTipo() == Pieza::ALFIL_NEGRO));
+
 
     // Calcular el paso de incremento para verificar el camino bloqueado
     int dx = (to_x - from_x == 0) ? 0 : (to_x - from_x > 0 ? 1 : -1);
@@ -374,12 +390,15 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         if (from_x <= to_x) {  // Los peones blancos solo pueden moverse hacia abajo en la matriz (incrementando x)
             return false;
         }
-        
+
         if (abs(to_x - from_x) > 1) {
-            if (contador > 1 && abs(to_x - from_x) == 2) {
+            cout << "Entra en el primer if" << endl;
+            cout << "from_x = " << from_x << "filas = " << filas << endl;
+            if (from_x != filas - 2) {
+                cout << "Entra en el segundo if" << endl;
                 return false;
             }
-            else if (contador < 2 && abs(to_x - from_x) > 2) {
+            if (abs(to_x - from_x) > 2) {
                 return false;
             }
         }
@@ -402,15 +421,15 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         if (from_x >= to_x) {  // Los peones negros solo pueden moverse hacia arriba en la matriz (decrementando x)
             return false;
         }
-        if (abs(to_x - from_x) > 1) {
-            return false;
-        }
 
         if (abs(to_x - from_x) > 1) {
-            if (contador > 1 && abs(to_x - from_x) == 2) {
+            cout << "Entra en el primer if" << endl;
+            cout << "from_x = " << from_x << "filas = " << filas << endl;
+            if (from_x != 1) {
+                cout << "Entra en el segundo if" << endl;
                 return false;
             }
-            else if (contador < 2 && abs(to_x - from_x) > 2) {
+            if (abs(to_x - from_x) > 2) {
                 return false;
             }
         }
@@ -499,12 +518,21 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         // Realiza el movimiento
         tab[to_x][to_y] = piezaOrigen;
         tab[from_x][from_y] = Pieza(); 
-
-        contador++;
         
+        contador++;
+
+        // Comprobar si hay promoción
+        if (esPeonBlanco && to_x == 0) {
+            promocionPeon(to_x, to_y, false);  // Modo Silver
+        }
+        if (esPeonNegro && to_x == filas - 1) {
+            promocionPeon(to_x, to_y, false);  // Modo Silver
+        }
+
         cout << "Movimiento realizado por una pieza de color " << tab[to_x][to_y].getColor() << endl;
 
         if (isKingInCheck(tab[to_x][to_y].getColor())) {
+            
             cout << "No puedes hacer ese movimiento: Pondrias al rey " << tab[to_x][to_y].getColor() << " en Jaque" << endl;
             tab[to_x][to_y] = piezaOriginalDestino;  // Restaura la pieza original en la posición destino
             tab[from_x][from_y] = piezaOriginalOrigen;
@@ -515,10 +543,20 @@ bool Tablero::movePiece(int from_x, int from_y, int to_x, int to_y) {
         if (!isKingInCheck(tab[from_x][from_y].getColor())) {
             cout << "Movimiento realizado por una pieza de color " << tab[from_x][from_y].getColor() << endl;
             primer_movimiento = false;
+           // play("sonidos/piezamovida.mp3");
+
+            if ((piezaOriginalDestino.getColor() == "BLANCO" && piezaOriginalOrigen.getColor() == "NEGRO") || (piezaOriginalDestino.getColor() == "NEGRO" && piezaOriginalOrigen.getColor() == "BLANCO")) {
+                play("sonidos/piezacomida.mp3");
+      
+            }
+            else {
+                play("sonidos/piezamovida.mp3");
+            }
             return true;
         }
     }
 
+    
     cout << "Captura inválida de una pieza del mismo equipo" << endl;
     return false;  // Captura inválida de una pieza del mismo equipo
 }
