@@ -6,9 +6,13 @@
 
 
 //AHORA SE COMEN LAS PIEZAS
+//DEFINIMOS LOS TAMAÑOS DE LOS TABLEROS PARA CADA MODO DE JUEGO
 
-#define FILAS	5		//filasxcolumnas grid
-#define COLUMNAS 4
+#define FILAS_SILVER 5
+#define COLUMNAS_SILVER 4
+
+#define FILAS_DEMI 8
+#define COLUMNAS_DEMI 4
 
 /////////////////////////////////
 //call back declarations: will be called by glut when registered
@@ -18,34 +22,52 @@ void OnMouseClick(int button, int state, int x, int y);
 void OnTimer(int value);
 
 ////////////////////////////////////////////////
-//global objects which make the world
-Tablero gameboard(FILAS, COLUMNAS);
-TableroGL scene(&gameboard);
+// Objetos globales para el tablero
+Tablero* gameboard = nullptr;
+TableroGL* boardGL = nullptr;
+
+// Funciones del menú
+void menu();
+void startGame(int mode);
+void displayMenu();
 
 ///////////////////////////////////////////////
 
 int main(int argc, char* argv[]) {
+    menu();
+    return 0;
+}
 
-	//GL Initialization stuff
-	glutInit(&argc, argv);
-	glutInitWindowSize(800, 600);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutCreateWindow("MiJuego");
+void menu() {
+    char choice;
+    displayMenu();
+    std::cout << "Selecciona una opción: ";
+    std::cin >> choice;
 
+    if (choice == '1') {
+        startGame(1); // Modo Silver
+    }
+    else if (choice == '2') {
+        startGame(2); // Modo Demi
+    }
+    else if (choice == 'q' || choice == 'Q') {
+        std::cout << "Saliendo del juego. ¡Adiós!\n";
+        exit(0);
+    }
+    else {
+        std::cout << "Opción no válida. Inténtalo de nuevo.\n";
+        menu();
+    }
+}
 
-	//Register callbacks
-	glutDisplayFunc(OnDraw);
-	glutKeyboardFunc(OnKeyboardDown);
-	glutMouseFunc(OnMouseClick);
-	//glutTimerFunc(25,OnTimer,0);			 //set timer if required, currently not used
-
-	//sets light and perspective
-	scene.init();
-
-	//glut takes control
-	glutMainLoop();
-
-	return 0;
+void displayMenu() {
+    std::cout << "==============================\n";
+    std::cout << "       EGO D E AJED REZ       \n";
+    std::cout << "==============================\n";
+    std::cout << "1. Modo Silver\n";
+    std::cout << "2. Modo Demi\n";
+    std::cout << "q. Salir\n";
+    std::cout << "==============================\n";
 }
 
 void OnDraw(void) {
