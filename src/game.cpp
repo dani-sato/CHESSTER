@@ -102,52 +102,31 @@ glutMouseFunc(OnMouseClick);
 }
 
 void OnDraw(void) {
-	//////////////////////
-	//captures drawing event
-	//gives control to scene
-	scene.Draw();
-	glutSwapBuffers();
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    boardGL->dibuja();
+    glutSwapBuffers();
 }
 
 void OnKeyboardDown(unsigned char key, int x_t, int y_t) {
-	//////////////////////
-	//captures keyboard event
-	//gives control to scene
-	scene.KeyDown(key);
-	glutPostRedisplay();
+    boardGL->KeyDown(key);
+    glutPostRedisplay();
 }
 
 void OnMouseClick(int b, int state, int x, int y) {
-	//////////////
-	//captures clicks with mouse with or without special keys (CTRL or SHIFT)
-	//gives control to board scene
-	bool down = (state == GLUT_DOWN);
-	int button;
-	if (b == GLUT_LEFT_BUTTON) {
-		button = MOUSE_LEFT_BUTTON;
-	}
-	if (b == GLUT_RIGHT_BUTTON) {
-		button = MOUSE_RIGHT_BUTTON;
-		cout << "MOUSE_RIGHT_BUTTON" << endl;
-	}
+    bool down = (state == GLUT_DOWN);
+    int button = (b == GLUT_LEFT_BUTTON) ? MOUSE_LEFT_BUTTON : MOUSE_RIGHT_BUTTON;
 
-	int specialKey = glutGetModifiers();
-	bool ctrlKey = (specialKey & GLUT_ACTIVE_CTRL) ? true : false;
-	bool sKey = specialKey & GLUT_ACTIVE_SHIFT;
+    int specialKey = glutGetModifiers();
+    bool ctrlKey = (specialKey & GLUT_ACTIVE_CTRL) ? true : false;
+    bool sKey = specialKey & GLUT_ACTIVE_SHIFT;
 
-
-	scene.MouseButton(x, y, b, down, sKey, ctrlKey);
-	glutPostRedisplay();
+    boardGL->MouseButton(x, y, button, down, sKey, ctrlKey);
+    glutPostRedisplay();
 }
 
-
 void OnTimer(int value) {
-	//****WRITE TIMER CODE HERE
-	if (value == 1) {
-		scene.moveRandomBlackPiece();  // Mueve una pieza negra
-		glutPostRedisplay();  // Solicita redibujar la ventana
-	}
-	//sets new timer (do not delete)
-//	glutTimerFunc(25,OnTimer,0);
-//	glutPostRedisplay();
+    if (value == 1) {
+        boardGL->moveRandomBlackPiece();
+        glutPostRedisplay();
+    }
 }
